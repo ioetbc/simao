@@ -1,20 +1,36 @@
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 
 import { plates } from '../../database/products'
 
 const Products = () => {
   const router = useRouter()
-  const { plate } = router.query
+
   return (
     <>
-      <div className="grid grid-cols-2 lg:grid-cols-3">
+      <div>
         {plates.map((product) => (
-          <img
-            key={product.sku}
-            onClick={() => router.push(`/plates/${product.sku}`)}
-            src={product.thumbnail}
-          />
+          <>
+            <div
+              className={`odd:ml-auto relative w-6/12`}
+              style={{
+                position: 'relative',
+                paddingLeft: `${product.offsetX}%`,
+                paddingRight: `${product.offsetX}%`,
+                paddingTop: `${product.offsetY}%`,
+              }}
+            >
+              <img
+                key={product.sku}
+                onClick={() => router.push(`/plates/${product.sku}`)}
+                src={product.thumbnail}
+                style={{
+                  width: '100%',
+                  position: 'relative',
+                }}
+              />
+              <p>{product.sku}</p>
+            </div>
+          </>
         ))}
       </div>
     </>
