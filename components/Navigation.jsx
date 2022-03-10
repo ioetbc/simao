@@ -5,9 +5,13 @@ export const Navigation = () => {
   return (
     <nav className="absolute right-8 top-8">
       <ul className="flex gap-8">
-        <li onClick={() => router.push(`/plates`)}>products</li>
-        <li>about</li>
-        <li onClick={() => router.push(`/contact`)}>contact</li>
+        <li className="cursor-pointer" onClick={() => router.push(`/plates`)}>
+          Products
+        </li>
+        <li className="cursor-pointer">About</li>
+        <li className="cursor-pointer" onClick={() => router.push(`/contact`)}>
+          Contact
+        </li>
       </ul>
     </nav>
   )

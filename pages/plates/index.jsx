@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 
 import { plates } from '../../database/products'
+import { Navigation } from '../../components/Navigation'
 
 const Products = () => {
   const router = useRouter()
@@ -8,10 +9,11 @@ const Products = () => {
   return (
     <>
       <div>
+        <Navigation />
         {plates.map((product) => (
           <>
             <div
-              className={`odd:ml-auto relative w-6/12`}
+              className={`odd:ml-auto relative w-6/12 grayscale hover:filter-none transition duration-300 ease-in-out cursor-pointer`}
               style={{
                 position: 'relative',
                 paddingLeft: `${product.offsetX}%`,
@@ -23,10 +25,7 @@ const Products = () => {
                 key={product.sku}
                 onClick={() => router.push(`/plates/${product.sku}`)}
                 src={product.thumbnail}
-                style={{
-                  width: '100%',
-                  position: 'relative',
-                }}
+                alt={`${product.skew} plate`}
               />
               <p>{product.sku}</p>
             </div>
