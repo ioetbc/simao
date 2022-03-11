@@ -1,41 +1,70 @@
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { plates } from '../../database/products'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
-import { Crumbs } from '../../components/Crumbs'
-import { Navigation } from '../../components/Navigation'
+import { Header } from '../../components/Header'
 
 const Plates = () => {
+  const [carouselIndex, setCarouselIndex] = useState(0)
   const router = useRouter()
   const { plate } = router.query
   const product = plates?.find((product) => plate === product.sku)
 
   return (
     <>
-      <nav className="relative right-8 top-8">
-        <Navigation />
-      </nav>
-      <Crumbs />
-      <div className="grid grid-cols-3 gap-3 md:grid-cols-2 lg:grid-cols-2">
-        <Carousel
-          autoPlay={true}
-          useKeyboardArrows={true}
-          showStatus={false}
-          stopOnHover={true}
-          centerMode={true}
-          centerSlidePercentage={90}
-          dynamicHeight={true}
-          emulateTouch={true}
-          infiniteLoop={true}
-          interval={1000}
-        >
-          {product?.imageCarousel.map((image) => (
-            <img src={image} />
-          ))}
-        </Carousel>
+      <Header renderBreadcrumb={true} />
+
+      <div className="grid md:gap-20 md:grid-cols-2 max-w-7xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16">
         <div>
-          <h1>{product?.sku}</h1>
+          <Carousel
+            // autoPlay={true}
+            useKeyboardArrows={true}
+            showStatus={false}
+            stopOnHover={true}
+            centerMode={true}
+            centerSlidePercentage={100}
+            dynamicHeight={true}
+            emulateTouch={true}
+            // infiniteLoop={true}
+            // interval={4000}
+            showThumbs={false}
+            showIndicators={false}
+            showArrows={false}
+            onChange={(index) => setCarouselIndex(index)}
+          >
+            {product?.imageCarousel.map((image) => (
+              <>
+                <img src={image} />
+              </>
+            ))}
+          </Carousel>
+          <p className="text-right mt-2">( {carouselIndex + 1} )</p>
+        </div>
+        <div>
+          <h1 className="text-2xl ">{product?.sku}</h1>
+          <ul className="flex gap-10 mt-10 mb-10">
+            <div>
+              <li>edition</li>
+
+              <li>material</li>
+
+              <li>dimensions</li>
+
+              <li>price</li>
+            </div>
+            <div>
+              <li>1</li>
+
+              <li>ceramic, copper glaze</li>
+
+              <li>w: 15cm h: 10cm</li>
+
+              <li>£50</li>
+            </div>
+          </ul>
           <p>{product?.description}</p>
+          <button className="mt-4">( enquire )</button>
         </div>
       </div>
     </>
