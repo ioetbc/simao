@@ -1,3 +1,3 @@
 export const Logo = () => (
-  <h1 className="absolute left-8 top-8 text-4xl">S~R</h1>
+  <img className="w-24 mb-auto" src="/images/logo.svg" />
 )

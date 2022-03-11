@@ -12,7 +12,9 @@ const Plates = () => {
 
   return (
     <>
-      <Navigation />
+      <nav className="relative right-8 top-8">
+        <Navigation />
+      </nav>
       <Crumbs />
       <div className="grid grid-cols-3 gap-3 md:grid-cols-2 lg:grid-cols-2">
         <Carousel

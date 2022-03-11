@@ -1,25 +1,32 @@
 import { useRouter } from 'next/router'
+import styled from 'styled-components'
 
 import { plates } from '../../database/products'
-import { Navigation } from '../../components/Navigation'
+import { Header } from '../../components/Header'
 
 const Products = () => {
   const router = useRouter()
 
+  const ImageStyles = styled.div`
+    width: 50%;
+    position: relative;
+    left: ${(props) =>
+      props?.index % 2 === 0 ? props.product.offsetX : -props.product.offsetX}%;
+    margin-left: ${(props) => props?.index % 2 !== 0 && 'auto'};
+    margin-top: 100px;
+    @media only screen and (min-width: 768px) {
+      width: ${(props) => props.product.width}%;
+      margin-top: ${(props) => props?.product?.offsetY}px;
+    }
+  `
   return (
     <>
       <div>
-        <Navigation />
-        {plates.map((product) => (
-          <>
+        <Header />
+        {plates.map((product, index) => (
+          <ImageStyles product={product} index={index}>
             <div
-              className={`odd:ml-auto relative w-6/12 grayscale hover:filter-none transition duration-300 ease-in-out cursor-pointer`}
-              style={{
-                position: 'relative',
-                paddingLeft: `${product.offsetX}%`,
-                paddingRight: `${product.offsetX}%`,
-                paddingTop: `${product.offsetY}%`,
-              }}
+              className={`relative odd:ml-auto relative grayscale hover:filter-none transition duration-300 ease-in-out cursor-pointer image-position`}
             >
               <img
                 key={product.sku}
@@ -29,7 +36,7 @@ const Products = () => {
               />
               <p>{product.sku}</p>
             </div>
-          </>
+          </ImageStyles>
         ))}
       </div>
     </>
