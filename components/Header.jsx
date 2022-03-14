@@ -2,8 +2,12 @@ import { Navigation } from './Navigation'
 import { Logo } from './Logo'
 import { Crumbs } from '../components/Crumbs'
 
-export const Header = ({ renderBreadcrumb = false }) => (
-  <div className="flex justify-between mr-16 ml-16 mt-10 h-28">
+export const Header = ({ bgcolor = true }) => (
+  <div
+    className={`flex ${
+      bgcolor && 'bg-lightGreen'
+    } z-10 justify-between mr-4 mr-4 md:mr-0 md:ml-0 pt-4 h-14 fixed md:relative top-0 pl-4 md:pl-16 pr-4 md:pr-16 md:pt-12 md:mb-8 w-full md:h-28`}
+  >
     <div>
       <Logo />
       {/* {renderBreadcrumb && <Crumbs />} */}

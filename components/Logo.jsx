@@ -1,3 +1,13 @@
-export const Logo = () => (
-  <img className="w-24 mb-auto" src="/images/logo.svg" />
-)
+import { useRouter } from 'next/router'
+
+export const Logo = () => {
+  const router = useRouter()
+
+  return (
+    <img
+      onClick={() => router.push('/')}
+      className="w-16 md:w-24 mb-auto cursor-pointer"
+      src="/images/logo.svg"
+    />
+  )
+}

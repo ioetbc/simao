@@ -26,7 +26,7 @@ const Products = () => {
         {plates.map((product, index) => (
           <ImageStyles product={product} index={index}>
             <div
-              className={`relative odd:ml-auto relative grayscale hover:filter-none transition duration-300 ease-in-out cursor-pointer image-position`}
+              className={`relative odd:ml-auto relative grayscale hover:filter-none transition duration-2000 ease-in-out cursor-pointer image-position`}
             >
               <img
                 key={product.sku}
@@ -34,7 +34,13 @@ const Products = () => {
                 src={product.thumbnail}
                 alt={`${product.skew} plate`}
               />
-              <p>{product.sku}</p>
+              <div className="flex gap-20 mt-4">
+                <div>
+                  <p>{product.sku}</p>
+                  <p>{product.pre}</p>
+                </div>
+                <p>{product.date}</p>
+              </div>
             </div>
           </ImageStyles>
         ))}

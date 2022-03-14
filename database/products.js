@@ -2,8 +2,8 @@ export const plates = [
   {
     id: '118',
     sku: 'emptor',
-    offsetX: 0,
-    offsetY: 0,
+    offsetX: 4,
+    offsetY: 400,
     width: 40,
     thumbnail: '/images/fbw.jpg',
     imageCarousel: ['/images/wr.jpg', '/images/rhrh.jpg', '/images/rhyr.jpg'],
@@ -12,11 +12,13 @@ export const plates = [
   },
   {
     id: '117',
-    sku: 'coram',
+    sku: 'Dark teracotta plate',
+    pre: 'Mixed glazes and oxides',
+    date: '2022',
     offsetX: 10,
-    offsetY: -100,
+    offsetY: -1200,
     width: 30,
-    thumbnail: '/images/ege.jpg',
+    thumbnail: '/images/wffd.jpg',
     imageCarousel: [
       'https://images.unsplash.com/photo-1643952565578-a39d383f1dc9',
       'https://images.unsplash.com/photo-1637295660413-2eb42a394d08',

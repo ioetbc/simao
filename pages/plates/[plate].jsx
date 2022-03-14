@@ -15,19 +15,19 @@ const Plates = () => {
     <>
       <Header renderBreadcrumb={true} />
 
-      <div className="grid md:gap-20 md:grid-cols-2 max-w-7xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16">
+      <div className="grid mt-24 md:gap-20 md:grid-cols-2 max-w-7xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16">
         <div>
           <Carousel
-            // autoPlay={true}
+            autoPlay={true}
+            infiniteLoop={true}
+            interval={5000}
+            stopOnHover={true}
             useKeyboardArrows={true}
             showStatus={false}
-            stopOnHover={true}
             centerMode={true}
             centerSlidePercentage={100}
             dynamicHeight={true}
             emulateTouch={true}
-            // infiniteLoop={true}
-            // interval={4000}
             showThumbs={false}
             showIndicators={false}
             showArrows={false}
@@ -41,7 +41,7 @@ const Plates = () => {
           </Carousel>
           <p className="text-right mt-2">( {carouselIndex + 1} )</p>
         </div>
-        <div>
+        <div className="md:mt-36">
           <h1 className="text-2xl ">{product?.sku}</h1>
           <ul className="flex gap-10 mt-10 mb-10">
             <div>
