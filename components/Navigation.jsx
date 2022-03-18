@@ -27,9 +27,6 @@ export const Navigation = () => {
               className="w-4 max-w-none ml-auto mb-4"
               src="/images/plus.svg"
             />
-            {/* <p className="text-xl mt-2" style={{ lineHeight: 0 }}> */}
-            {/* + */}
-            {/* </p> */}
           </div>
           {openMobileMenu && (
             <>
@@ -37,37 +34,9 @@ export const Navigation = () => {
 
               <li
                 className="cursor-pointer relative"
-                onClick={() => setOpen(!open)}
+                onClick={() => router.push(`/plates`)}
               >
                 Pieces
-                {open && (
-                  <ul className="mt-2 absolute left-4">
-                    <li
-                      className="cursor-pointer"
-                      onClick={() => router.push(`/plates`)}
-                    >
-                      Plates
-                    </li>
-                    <li
-                      className="cursor-pointer"
-                      onClick={() => router.push(`/bowls`)}
-                    >
-                      Bowls
-                    </li>
-                    <li
-                      className="cursor-pointer"
-                      onClick={() => router.push(`/mugs`)}
-                    >
-                      Mugs
-                    </li>
-                    <li
-                      className="cursor-pointer"
-                      onClick={() => router.push(`/all`)}
-                    >
-                      All
-                    </li>
-                  </ul>
-                )}
               </li>
 
               <li
@@ -83,40 +52,11 @@ export const Navigation = () => {
 
       <nav className="flex justify-end gap-8 hidden md:block">
         <ul className="flex gap-8">
-          <li className="cursor-pointer">About</li>
-          <li
-            className="cursor-pointer relative"
-            onClick={() => setOpen(!open)}
-          >
+          <li className="cursor-pointer">
+            <p className="text-orange-400">About</p>
+          </li>
+          <li className="cursor-pointer" onClick={() => router.push(`/plates`)}>
             Pieces
-            {open && (
-              <ul className="mt-2 absolute left-4">
-                <li
-                  className="cursor-pointer"
-                  onClick={() => router.push(`/plates`)}
-                >
-                  Plates
-                </li>
-                <li
-                  className="cursor-pointer"
-                  onClick={() => router.push(`/bowls`)}
-                >
-                  Bowls
-                </li>
-                <li
-                  className="cursor-pointer"
-                  onClick={() => router.push(`/mugs`)}
-                >
-                  Mugs
-                </li>
-                <li
-                  className="cursor-pointer"
-                  onClick={() => router.push(`/all`)}
-                >
-                  All
-                </li>
-              </ul>
-            )}
           </li>
           <li
             className="cursor-pointer"

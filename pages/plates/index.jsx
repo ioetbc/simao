@@ -1,11 +1,22 @@
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import styled from 'styled-components'
 
+import { ProductLoader } from '../../components/loaders/ProductLoader'
+import { SecondProductLoader } from '../../components/loaders/SecondProductLoader'
 import { plates } from '../../database/products'
 import { Header } from '../../components/Header'
 
 const Products = () => {
+  const [loading, setLoading] = useState(true)
   const router = useRouter()
+
+  useEffect(() => {
+    loading
+      ? document.querySelector('body').classList.add('loading')
+      : document.querySelector('body').classList.remove('loading')
+  }, [loading])
 
   const ImageStyles = styled.div`
     width: 50%;
@@ -20,32 +31,61 @@ const Products = () => {
     }
   `
   return (
-    <>
-      <div>
-        <Header />
-        {plates.map((product, index) => (
-          <ImageStyles product={product} index={index}>
-            <div
-              className={`relative odd:ml-auto relative grayscale hover:filter-none transition duration-2000 ease-in-out cursor-pointer image-position`}
-            >
-              <img
-                key={product.sku}
-                onClick={() => router.push(`/plates/${product.sku}`)}
-                src={product.thumbnail}
-                alt={`${product.skew} plate`}
-              />
-              <div className="flex gap-20 mt-4">
-                <div>
-                  <p>{product.sku}</p>
-                  <p>{product.pre}</p>
-                </div>
-                <p>{product.date}</p>
-              </div>
+    <AnimateSharedLayout type="crossfade">
+      <AnimatePresence>
+        {loading ? (
+          <motion.div key="loader">
+            <ProductLoader setLoading={setLoading} />
+          </motion.div>
+        ) : (
+          <>
+            <div>
+              {/* <motion.div key="secondLoader">
+                <SecondProductLoader setLoading={setLoading} />
+              </motion.div> */}
+              <Header />
+              {plates.map((product, index) => (
+                <ImageStyles product={product} index={index}>
+                  <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                      hidden: {
+                        opacity: 0,
+                        y: 20,
+                      },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                          // ease: [0.6, 0.01, -0.05, 0.95],
+                          duration: 0.4,
+                        },
+                      },
+                    }}
+                    className={`relative odd:ml-auto relative grayscale hover:filter-none transition duration-2000 ease-in-out cursor-pointer image-position`}
+                  >
+                    <img
+                      key={product.sku}
+                      onClick={() => router.push(`/plates/${product.sku}`)}
+                      src={product.thumbnail}
+                      alt={`${product.skew} plate`}
+                    />
+                    <div className="flex gap-20 mt-4">
+                      <div>
+                        <p>{product.sku}</p>
+                        <p>{product.pre}</p>
+                      </div>
+                      <p>{product.date}</p>
+                    </div>
+                  </motion.div>
+                </ImageStyles>
+              ))}
             </div>
-          </ImageStyles>
-        ))}
-      </div>
-    </>
+          </>
+        )}
+      </AnimatePresence>
+    </AnimateSharedLayout>
   )
 }
 
