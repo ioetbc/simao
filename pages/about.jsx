@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { Header } from '../components/Header'
 
-const Contact = () => {
+const About = () => {
   return (
     <>
       <Header />
@@ -12,7 +12,7 @@ const Contact = () => {
           <img src="/images/ege.jpg"></img>
         </div>
         <div className="md:mt-36">
-          <h1 className="text-2xl mb-4 ">contact</h1>
+          <h1 className="text-2xl mb-4 ">about</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             eos repellendus, nostrum ratione perferendis veritatis. Explicabo,
@@ -37,4 +37,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default About

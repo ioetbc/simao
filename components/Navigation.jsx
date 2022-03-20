@@ -53,7 +53,12 @@ export const Navigation = () => {
       <nav className="flex justify-end gap-8 hidden md:block">
         <ul className="flex gap-8">
           <li className="cursor-pointer">
-            <p className="text-orange-400">About</p>
+            <p
+              className="text-orange-400"
+              onClick={() => router.push(`/about`)}
+            >
+              About
+            </p>
           </li>
           <li className="cursor-pointer" onClick={() => router.push(`/plates`)}>
             Pieces
