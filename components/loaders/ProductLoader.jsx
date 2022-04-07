@@ -75,9 +75,6 @@ export const ProductLoader = ({ setLoading }) => {
         {images.map((image) => (
           <ImageBlock src={image.src} variants={image.variant} id={image.id} />
         ))}
-        {/* <motion.div variants={itemMain} className="transition-image">
-          <motion.img layoutId="main-image-1" src="/images/ege.jpg" />
-        </motion.div> */}
       </motion.div>
     </motion.div>
   )
@@ -85,14 +82,7 @@ export const ProductLoader = ({ setLoading }) => {
 
 export const ImageBlock = ({ variants, id, src }) => {
   return (
-    <motion.div
-      variants={variants}
-      className={`image-block ${id}`}
-      // style={{
-      //   top: `${posY}vh`,
-      //   left: `${posX}vw `,
-      // }}
-    >
+    <motion.div variants={variants} className={`image-block ${id}`}>
       <Image
         src={src}
         // fallback="/images/${id}.jpg"

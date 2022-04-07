@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
+
 import { plates } from '../../database/products'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
@@ -15,7 +17,19 @@ const Plates = () => {
     <>
       <Header renderBreadcrumb={true} />
 
-      <div className="grid mt-24 md:gap-20 md:grid-cols-2 max-w-7xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            opacity: 0,
+          },
+          visible: {
+            opacity: 1,
+          },
+        }}
+        className="grid mt-24 md:gap-20 md:grid-cols-2 max-w-7xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16"
+      >
         <div>
           <Carousel
             autoPlay={true}
@@ -66,7 +80,7 @@ const Plates = () => {
           <p>{product?.description}</p>
           <button className="mt-4">( enquire )</button>
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }

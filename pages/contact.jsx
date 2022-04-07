@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
+
 import { Header } from '../components/Header'
 
 const Contact = () => {
@@ -7,7 +9,19 @@ const Contact = () => {
     <>
       <Header />
 
-      <div className="grid mt-24 md:gap-20 md:grid-cols-2 max-w-7xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            opacity: 0,
+          },
+          visible: {
+            opacity: 1,
+          },
+        }}
+        className="grid mt-24 md:gap-20 md:grid-cols-2 max-w-7xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16"
+      >
         <div>
           <img src="/images/ege.jpg"></img>
         </div>
@@ -32,7 +46,7 @@ const Contact = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }
