@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import styled from 'styled-components'
 
@@ -7,6 +9,8 @@ import { ProductLoader } from '../../components/loaders/ProductLoader'
 import { SecondProductLoader } from '../../components/loaders/SecondProductLoader'
 import { plates } from '../../database/products'
 import { Header } from '../../components/Header'
+
+import profilePic from '../../public/images/fbw-resized.jpg'
 
 const Products = () => {
   const [loading, setLoading] = useState(true)
@@ -40,9 +44,6 @@ const Products = () => {
         ) : (
           <>
             <div>
-              {/* <motion.div key="secondLoader">
-                <SecondProductLoader setLoading={setLoading} />
-              </motion.div> */}
               <Header />
               {plates.map((product, index) => (
                 <ImageStyles product={product} index={index}>
@@ -65,11 +66,12 @@ const Products = () => {
                     }}
                     className={`relative odd:ml-auto relative grayscale hover:filter-none transition duration-2000 ease-in-out cursor-pointer image-position`}
                   >
-                    <img
+                    <Image
                       key={product.sku}
-                      onClick={() => router.push(`/plates/${product.sku}`)}
-                      src={product.thumbnail}
+                      src={require(`../../public${product.thumbnail}`)}
                       alt={`${product.skew} plate`}
+                      placeholder="blur"
+                      onClick={() => router.push(`/plates/${product.sku}`)}
                     />
                     <div className="flex gap-20 mt-4">
                       <div>

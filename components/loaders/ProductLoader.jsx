@@ -1,9 +1,9 @@
 import React from 'react'
+import Image from 'next/image'
+
 import { motion } from 'framer-motion'
 
-import Image from './Image'
-
-// Import images
+import thing from '../../public/images/mngn.jpg'
 
 const container = {
   show: {
@@ -36,27 +36,27 @@ const item = {
 const images = [
   {
     id: 'image-2',
-    src: '/images/mngn.jpg',
+    src: 'images/mngn.jpg',
     variant: item,
   },
   {
     id: 'image-6',
-    src: '/images/fbw.jpg',
+    src: 'images/fbw.jpg',
     variant: item,
   },
   {
     id: 'image-7',
-    src: '/images/wffd.jpg',
+    src: 'images/wffd.jpg',
     variant: item,
   },
   {
     id: 'image-9',
-    src: '/images/rjm.jpg',
+    src: 'images/rjm.jpg',
     variant: item,
   },
   {
     id: 'image-10',
-    src: '/images/wdwd.jpg',
+    src: 'images/wdwd.jpg',
     variant: item,
   },
 ]
@@ -73,21 +73,16 @@ export const ProductLoader = ({ setLoading }) => {
         className="loader-inner"
       >
         {images.map((image) => (
-          <ImageBlock src={image.src} variants={image.variant} id={image.id} />
+          <motion.div variants={item} className={`image-block ${image.id}`}>
+            <Image
+              key={image.id}
+              src={require(`../../public/${image.src}`)}
+              alt={`animating ${image.id}`}
+              placeholder="blur"
+            />
+          </motion.div>
         ))}
       </motion.div>
-    </motion.div>
-  )
-}
-
-export const ImageBlock = ({ variants, id, src }) => {
-  return (
-    <motion.div variants={variants} className={`image-block ${id}`}>
-      <Image
-        src={src}
-        // fallback="/images/${id}.jpg"
-        alt={id}
-      />
     </motion.div>
   )
 }
