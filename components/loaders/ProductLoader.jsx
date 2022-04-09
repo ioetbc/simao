@@ -36,27 +36,27 @@ const item = {
 const images = [
   {
     id: 'image-2',
-    src: 'images/mngn.jpg',
+    src: 'images/animation/1.jpg',
     variant: item,
   },
   {
     id: 'image-6',
-    src: 'images/fbw.jpg',
+    src: 'images/animation/2.jpg',
     variant: item,
   },
   {
     id: 'image-7',
-    src: 'images/wffd.jpg',
+    src: 'images/animation/3.jpg',
     variant: item,
   },
   {
     id: 'image-9',
-    src: 'images/rjm.jpg',
+    src: 'images/animation/4.jpg',
     variant: item,
   },
   {
     id: 'image-10',
-    src: 'images/wdwd.jpg',
+    src: 'images/animation/5.jpg',
     variant: item,
   },
 ]

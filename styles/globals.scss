@@ -24,7 +24,7 @@ li {
   font-weight: 200;
   font-size: 16px;
   line-height: 24px;
-  color: #262626;
+  color: #040404;
 }
 
 a {
@@ -62,7 +62,7 @@ body.loading {
         left: 1%;
         bottom: 2%;
         @media (min-width: '768px') {
-          width: 400px;
+          width: 900px;
         }
       }
       &.image-6 {
@@ -70,7 +70,7 @@ body.loading {
         left: 3%;
         bottom: 4%;
         @media (min-width: '768px') {
-          width: 400px;
+          width: 900px;
         }
       }
       &.image-7 {
@@ -78,7 +78,7 @@ body.loading {
         left: -3%;
         bottom: -5%;
         @media (min-width: '768px') {
-          width: 350px;
+          width: 800px;
         }
       }
       &.image-9 {
@@ -94,7 +94,7 @@ body.loading {
         left: 4%;
         bottom: 1%;
         @media (min-width: '768px') {
-          width: 400px;
+          width: 900px;
         }
       }
       img,
