@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 
 import { Header } from '../components/Header'
@@ -23,7 +21,7 @@ const Contact = () => {
         className="grid mt-24 md:gap-20 md:grid-cols-2 max-w-7xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16"
       >
         <div>
-          <img src="/images/ege.jpg"></img>
+          <img src="/images/ege.jpg" alt="about"></img>
         </div>
         <div className="md:mt-36">
           <h1 className="text-2xl mb-4 ">contact</h1>
@@ -36,13 +34,19 @@ const Contact = () => {
           <p>social media</p>
           <ul>
             <li>
-              <button className="mt-4">( instagram )</button>
+              <button type="button" className="mt-4">
+                ( instagram )
+              </button>
             </li>
             <li>
-              <button className="mt-4">( email )</button>
+              <button type="button" className="mt-4">
+                ( email )
+              </button>
             </li>
             <li>
-              <button className="mt-4">( phone )</button>
+              <button type="button" className="mt-4">
+                ( phone )
+              </button>
             </li>
           </ul>
         </div>

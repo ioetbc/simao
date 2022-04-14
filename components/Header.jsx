@@ -1,6 +1,5 @@
 import { Navigation } from './Navigation'
 import { Logo } from './Logo'
-import { Crumbs } from '../components/Crumbs'
 
 export const Header = ({ bgcolor = true }) => (
   <div
@@ -10,7 +9,6 @@ export const Header = ({ bgcolor = true }) => (
   >
     <div>
       <Logo />
-      {/* {renderBreadcrumb && <Crumbs />} */}
     </div>
     <Navigation />
   </div>

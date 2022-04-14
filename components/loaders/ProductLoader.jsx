@@ -3,8 +3,6 @@ import Image from 'next/image'
 
 import { motion } from 'framer-motion'
 
-import thing from '../../public/images/mngn.jpg'
-
 const container = {
   show: {
     transition: {
@@ -38,26 +36,36 @@ const images = [
     id: 'image-2',
     src: 'images/animation/1.jpg',
     variant: item,
+    width: 960,
+    height: 640,
   },
   {
     id: 'image-6',
     src: 'images/animation/2.jpg',
     variant: item,
+    width: 960,
+    height: 640,
   },
   {
     id: 'image-7',
     src: 'images/animation/3.jpg',
     variant: item,
+    width: 533,
+    height: 800,
   },
   {
     id: 'image-9',
     src: 'images/animation/4.jpg',
     variant: item,
+    width: 540,
+    height: 816,
   },
   {
     id: 'image-10',
     src: 'images/animation/5.jpg',
     variant: item,
+    width: 480,
+    height: 720,
   },
 ]
 
@@ -79,6 +87,8 @@ export const ProductLoader = ({ setLoading }) => {
               src={require(`../../public/${image.src}`)}
               alt={`animating ${image.id}`}
               placeholder="blur"
+              width={image.width}
+              height={image.height}
             />
           </motion.div>
         ))}

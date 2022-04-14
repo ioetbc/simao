@@ -1,18 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import '../styles/globals.scss'
-import { useRouter } from 'next/router'
 
 import { motion } from 'framer-motion'
 
-const transition = {}
-
 function MyApp({ Component, pageProps }) {
   const [animatePage, setAnimatePage] = useState(false)
-  const router = useRouter()
-
-  // useEffect(() => {
-  //   if (router.pathname !== '/plates') setAnimatePage(true)
-  // }, [router.pathname])
 
   return animatePage ? (
     <>

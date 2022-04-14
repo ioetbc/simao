@@ -58,44 +58,24 @@ body.loading {
       margin: auto;
 
       &.image-2 {
-        width: 200px;
         left: 1%;
         bottom: 2%;
-        @media (min-width: '768px') {
-          width: 900px;
-        }
       }
       &.image-6 {
-        width: 200px;
         left: 3%;
-        bottom: 4%;
-        @media (min-width: '768px') {
-          width: 900px;
-        }
+        bottom: 10%;
       }
       &.image-7 {
-        width: 200px;
         left: -3%;
-        bottom: -5%;
-        @media (min-width: '768px') {
-          width: 800px;
-        }
+        bottom: 5%;
       }
       &.image-9 {
-        width: 250px;
-        left: 0;
-        bottom: 4%;
-        @media (min-width: '768px') {
-          width: 500px;
-        }
+        left: 2%;
+        bottom: -4%;
       }
       &.image-10 {
-        width: 200px;
         left: 4%;
         bottom: 1%;
-        @media (min-width: '768px') {
-          width: 900px;
-        }
       }
       img,
       source {

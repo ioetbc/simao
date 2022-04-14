@@ -3,8 +3,8 @@ import { useState } from 'react'
 
 export const Navigation = () => {
   const router = useRouter()
-  const [open, setOpen] = useState(false)
   const [openMobileMenu, setOpenMobileMenu] = useState(false)
+
   return (
     <>
       <nav className="md:hidden">
@@ -26,6 +26,7 @@ export const Navigation = () => {
             <img
               className="w-4 max-w-none ml-auto mb-4"
               src="/images/plus.svg"
+              alt="menu"
             />
           </div>
           {openMobileMenu && (
