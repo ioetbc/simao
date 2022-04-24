@@ -38,6 +38,31 @@ export default function Home() {
     const dy = targetY - y
     y += dy * easing
 
+    const topRowYPosition = images[0].height * 2
+    const middleRowYPosition = y - images[0].height / 2
+    const bottomRowYPosition = y + images[0].height
+
+    // images.forEach((image, index) => {
+    //   const prevImage = index === 0 ? 0 : index - 1
+
+    //   let yPosition
+
+    //   if (index <= 4) {
+    //     yPosition = images[0].height * 2
+    //   } else if (index > 4 && index <= 9) {
+    //     yPosition = y - images[0].height / 2
+    //   } else {
+    //     yPosition = y + images[0].height
+    //   }
+    //   p5.image(
+    //     image.src,
+    //     x - prevImage.width - prevImage.width / 2 - 100,
+    //     yPosition - image.offsetY,
+    //     image.width,
+    //     image.height,
+    //   )
+    // })
+
     // top
     const topLevelY = y - images[0].height * 2
     // top middle
