@@ -38,9 +38,9 @@ export default function Home() {
     const dy = targetY - y
     y += dy * easing
 
-    const topRowYPosition = images[0].height * 2
-    const middleRowYPosition = y - images[0].height / 2
-    const bottomRowYPosition = y + images[0].height
+    // const topRowYPosition = images[0].height * 2
+    // const middleRowYPosition = y - images[0].height / 2
+    // const bottomRowYPosition = y + images[0].height
 
     // images.forEach((image, index) => {
     //   const prevImage = index === 0 ? 0 : index - 1
