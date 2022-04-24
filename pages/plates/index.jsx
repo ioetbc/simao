@@ -23,13 +23,13 @@ const Products = () => {
     width: 50%;
     position: relative;
     left: ${(props) =>
-      props.index % 2 === 0 ? props.product.offsetX : -props.product.offsetX}%;
+      props.index % 2 === 0 ? props.product.offsetX : -props.product.offsetX}vw;
     margin-left: ${(props) => props.index % 2 !== 0 && 'auto'};
     margin-top: 100px;
     @media only screen and (min-width: 768px) {
       width: ${(props) => props.product.width}px;
       height: ${(props) => props.product.width}px;
-      margin-top: ${(props) => props?.product?.offsetY}px;
+      margin-top: ${(props) => props?.product?.offsetY}vh;
     }
   `
   return (

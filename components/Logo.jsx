@@ -7,12 +7,6 @@ export const Logo = () => {
   const transition = { duration: 0.5, ease: 'easeInOut' }
 
   return (
-    // <img
-    //   onClick={() => router.push('/')}
-    //   className="w-16 md:w-24 mb-auto cursor-pointer"
-    //   src="/images/logo.svg"
-    // />
-
     <svg
       id="Layer_1"
       data-name="Layer 1"

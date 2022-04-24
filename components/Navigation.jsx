@@ -1,12 +1,19 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
+import { motion } from 'framer-motion'
+
 export const Navigation = () => {
   const router = useRouter()
   const [openMobileMenu, setOpenMobileMenu] = useState(false)
+  const transition = { duration: 0.5, ease: 'easeInOut' }
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ ...transition, delay: 1.5 }}
+    >
       <nav className="md:hidden">
         <ul
           className="text-left pl-4 h-screen z-50 pr-4"
@@ -79,6 +86,6 @@ export const Navigation = () => {
           </li>
         </ul>
       </nav>
-    </>
+    </motion.div>
   )
 }

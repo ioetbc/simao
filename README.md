@@ -1,2 +1,1 @@
-npm run dev
-npm run build > git push > git push origin heroku to explode the bitch
+to deploy you just need to push to main in git and it will auto deploy through vercel: https://vercel.com/ioetbc/simao
