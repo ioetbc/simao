@@ -29,7 +29,7 @@ export default function Home() {
   }
 
   const draw = (p5) => {
-    p5.background(237, 34, 93)
+    p5.background(255, 254, 242)
     const targetX = p5.mouseX
     const dx = targetX - x
     x += dx * easing

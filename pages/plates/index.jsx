@@ -31,6 +31,17 @@ const Products = () => {
       height: ${(props) => props.product.width}px;
       margin-top: ${(props) => props?.product?.offsetY}px;
     }
+    .details {
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+      padding-left: ${(props) =>
+        props.product.offsetX === 0 && props.index % 2 === 0 ? '16px' : 0};
+    }
+    .image-container:hover {
+      .details {
+        opacity: 1;
+      }
+    }
   `
   return (
     <AnimateSharedLayout type="crossfade">
@@ -56,27 +67,28 @@ const Products = () => {
                       opacity: 1,
                       y: 0,
                       transition: {
-                        // ease: [0.6, 0.01, -0.05, 0.95],
                         duration: 0.4,
                       },
                     },
                   }}
                   className="relative odd:ml-auto relative grayscale hover:filter-none transition duration-2000 ease-in-out cursor-pointer image-position"
                 >
-                  <Image
-                    key={product.sku}
-                    src={require(`../../public${product.thumbnail}`)}
-                    alt={`${product.skew} plate`}
-                    placeholder="blur"
-                    width={product.width}
-                    height={product.height}
-                    onClick={() => router.push(`/plates/${product.sku}`)}
-                  />
-                  <div className="flex gap-20 mt-4">
-                    <div>
-                      <p>{product.pre}</p>
+                  <div className="image-container">
+                    <Image
+                      key={product.sku}
+                      src={require(`../../public${product.thumbnail}`)}
+                      alt={`${product.skew} plate`}
+                      placeholder="blur"
+                      width={product.width}
+                      height={product.height}
+                      onClick={() => router.push(`/plates/${product.sku}`)}
+                    />
+                    <div className="flex gap-20 mt-4 details">
+                      <div>
+                        <p>{product.pre}</p>
+                      </div>
+                      {/* <p>{product.date}</p> */}
                     </div>
-                    <p>{product.date}</p>
                   </div>
                 </motion.div>
               </ImageStyles>
