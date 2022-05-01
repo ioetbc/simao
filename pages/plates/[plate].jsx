@@ -27,29 +27,12 @@ const Plates = () => {
       className="grid mt-24 md:gap-20 md:grid-cols-2 max-w-7xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16"
     >
       <div className="mt-28 md:mt-48">
-        <Carousel
-          autoPlay={true}
-          infiniteLoop={true}
-          interval={5000}
-          stopOnHover={true}
-          useKeyboardArrows={true}
-          showStatus={false}
-          centerMode={true}
-          centerSlidePercentage={100}
-          dynamicHeight={true}
-          emulateTouch={true}
-          showThumbs={false}
-          showIndicators={false}
-          showArrows={false}
-          onChange={(index) => setCarouselIndex(index)}
-        >
-          {product?.imageCarousel.map((image) => (
-            <img src={image} alt={image.sku} />
-          ))}
-        </Carousel>
+        {product?.imageCarousel.map((image) => (
+          <img src={image} alt={image.sku} />
+        ))}
         <p className="text-right mt-2">( {carouselIndex + 1} )</p>
       </div>
-      <div className="md:mt-72">
+      <div className="md:mt-72 sticky top-10">
         <h1 className="text-2xl ">{product?.sku}</h1>
         <ul className="flex gap-10 mt-10 mb-10">
           <div>
@@ -72,9 +55,9 @@ const Plates = () => {
           </div>
         </ul>
         <p>{product?.description}</p>
-        <button type="button" className="mt-4">
-          ( enquire )
-        </button>
+        <div className="mt-4">
+          <a href="mailto:ioetbc@gmail.com">( enquire )</a>
+        </div>
       </div>
     </motion.div>
   )

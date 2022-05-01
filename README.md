@@ -10,3 +10,6 @@ TODO
 6. make the subpages have a page wrapper that you just pass an image, heading and text
 7. pieces page smaller screens there is sometimes an overlap
 8. make title on the homepage only animate in once
+9. remove the slideshow and replace with scrolling images
+10. add in zoom effect to the product page
+11. make the logio smaller when you scroll

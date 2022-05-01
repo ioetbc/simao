@@ -11,7 +11,7 @@ export const Logo = () => {
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 35.03 12.03"
-      className="w-16 md:w-24 mb-auto cursor-pointer"
+      className="w-16 md:w-20 mb-auto cursor-pointer"
       onClick={() => router.push('/')}
     >
       <defs>

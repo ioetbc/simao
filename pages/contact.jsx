@@ -13,26 +13,25 @@ const Contact = () => {
           opacity: 1,
         },
       }}
-      className="grid mt-24 md:gap-20 md:grid-cols-2 max-w-7xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16"
+      className="grid mt-24 md:gap-20 md:grid-cols-2 max-w-8xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16"
     >
-      <div className="md:mt-52">
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-          eos repellendus, nostrum ratione perferendis veritatis. Explicabo,
-          eveniet? Laborum asperiores a incidunt dolore amet expedita vel
-          officia doloremque dolor. Repudiandae, ducimus. `
+      <div className="md:mt-52 flex justify-between">
+        <p className="max-w-xs text-xl">
+          I'm always open to collaborations, swaps and skill exchanges. For all
+          sales, commissions, collaborations, press and general enquiries please
+          contact me.
         </p>
-        <ul className="mt-4">
-          <li className="mt-4">
+        <ul className="text-right mt-32">
+          <li>
             <a href="https://www.instagram.com/simao_romualdo/" target="_blank">
-              ( instagram )
+              instagram
             </a>
           </li>
-          <li className="mt-4">
-            <a href="mailto:ioetbc@gmail.com">( email )</a>
+          <li className="mt-2">
+            <a href="mailto:ioetbc@gmail.com">simao@simaoromualdo.com</a>
           </li>
-          <li className="mt-4">
-            <a href="tel:07493774943">( phone )</a>
+          <li className="mt-2">
+            <a href="tel:07493774943">07493774943</a>
           </li>
         </ul>
       </div>

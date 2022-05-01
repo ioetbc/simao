@@ -33,7 +33,6 @@ const Products = () => {
     }
     .details {
       opacity: 0;
-      transition: opacity 0.4s ease-in-out;
       padding-left: ${(props) =>
         props.product.offsetX === 0 && props.index % 2 === 0 ? '16px' : 0};
     }

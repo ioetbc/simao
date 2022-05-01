@@ -62,24 +62,24 @@ export const Navigation = () => {
         <ul className="flex gap-8">
           <li
             onClick={() => router.push(`/about`)}
-            className="cursor-pointer link text-xl"
+            className="cursor-pointer link text-lg"
           >
             About
           </li>
           <li
-            className="cursor-pointer link text-xl"
+            className="cursor-pointer link text-lg"
             onClick={() => router.push(`/plates`)}
           >
             Pieces
           </li>
           <li
-            className="cursor-pointer link text-xl"
+            className="cursor-pointer link text-lg"
             onClick={() => router.push(`/investigation`)}
           >
             Investigation
           </li>
           <li
-            className="cursor-pointer link text-xl"
+            className="cursor-pointer link text-lg"
             onClick={() => router.push(`/contact`)}
           >
             Contact

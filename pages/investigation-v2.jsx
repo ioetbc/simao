@@ -87,13 +87,13 @@ export default function Home() {
       for (let x = 0; x < images.length; x++) {
         p5.image(
           images[x].src,
-          images[x].width * x -
-            galleryWidth / 2 +
-            mouseX +
+          images[x].width * x +
+            galleryWidth / 3 +
+            -mouseX +
             images[x].offsetX * x,
-          images[x].height * y -
-            galleryHeight / 2 +
-            mouseY +
+          images[x].height * y +
+            -galleryHeight / 3 +
+            -mouseY +
             images[x].offsetY * y,
           images[x].width,
           images[x].height,
