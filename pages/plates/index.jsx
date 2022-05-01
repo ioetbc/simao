@@ -29,7 +29,7 @@ const Products = () => {
     @media only screen and (min-width: 768px) {
       width: ${(props) => props.product.width}px;
       height: ${(props) => props.product.width}px;
-      margin-top: ${(props) => props?.product?.offsetY}vh;
+      margin-top: ${(props) => props?.product?.offsetY}px;
     }
   `
   return (
