@@ -15,7 +15,7 @@ export default function Home() {
       width: 326,
       height: 492,
       offsetX: 100,
-      offsetY: 100,
+      offsetY: 50,
     },
     {
       src: '/images/products/granite-nude-bowls/15.jpg',
@@ -82,6 +82,7 @@ export default function Home() {
     const targetY = p5.mouseY
     const dy = targetY - mouseY
     mouseY += dy * easing
+
     for (let y = 0; y < images.length; y++) {
       for (let x = 0; x < images.length; x++) {
         p5.image(

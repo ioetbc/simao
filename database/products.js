@@ -66,7 +66,7 @@ export const plates = [
     pre: 'porcelain incision bowls',
     date: '2022',
     offsetX: offset.x.two,
-    offsetY: offset.y.two,
+    offsetY: offset.one,
     ...dimensions.portrait.medium,
     thumbnail: '/images/products/porcelain-incision-bowls/1.jpg',
     imageCarousel: [

@@ -15,33 +15,24 @@ const Contact = () => {
       }}
       className="grid mt-24 md:gap-20 md:grid-cols-2 max-w-7xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16"
     >
-      <div className="md:mt-36">
-        <img src="/images/products/black-moon-bowl/1.jpg" alt="about"></img>
-      </div>
       <div className="md:mt-52">
-        <h1 className="text-2xl mb-4">contact</h1>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
           eos repellendus, nostrum ratione perferendis veritatis. Explicabo,
           eveniet? Laborum asperiores a incidunt dolore amet expedita vel
           officia doloremque dolor. Repudiandae, ducimus. `
         </p>
-        <p>social media</p>
-        <ul>
-          <li>
-            <button type="button" className="mt-4">
+        <ul className="mt-4">
+          <li className="mt-4">
+            <a href="https://www.instagram.com/simao_romualdo/" target="_blank">
               ( instagram )
-            </button>
+            </a>
           </li>
-          <li>
-            <button type="button" className="mt-4">
-              ( email )
-            </button>
+          <li className="mt-4">
+            <a href="mailto:ioetbc@gmail.com">( email )</a>
           </li>
-          <li>
-            <button type="button" className="mt-4">
-              ( phone )
-            </button>
+          <li className="mt-4">
+            <a href="tel:07493774943">( phone )</a>
           </li>
         </ul>
       </div>
