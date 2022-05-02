@@ -7,21 +7,21 @@ const Sketch = dynamic(() => import('react-p5'), { ssr: false })
 export default function Home() {
   let mouseX = 0
   let mouseY = 0
-  const easing = 0.09
+  const easing = 0.04
 
   const images = [
     {
       src: '/images/products/granite-nude-bowls/2.jpg',
       width: 326,
       height: 492,
-      offsetX: 100,
+      offsetX: 200,
       offsetY: 50,
     },
     {
       src: '/images/products/granite-nude-bowls/15.jpg',
       width: 326,
       height: 492,
-      offsetX: 50,
+      offsetX: 100,
       offsetY: 10,
     },
     {
@@ -37,13 +37,6 @@ export default function Home() {
       height: 492,
       offsetX: 100,
       offsetY: 50,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/14.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 120,
-      offsetY: 20,
     },
   ]
 
@@ -74,30 +67,36 @@ export default function Home() {
     // p5.noCursor()
   }
 
+  const getRow = ({ index }) => {
+    if (index <= 4) {
+      return 1
+    } else if (index > 4 && index <= 8) {
+      return 2
+    } else {
+      return 3
+    }
+  }
+
   const draw = (p5) => {
     p5.background(255, 254, 242)
     const targetX = p5.mouseX
     const dx = targetX - mouseX
-    mouseX += dx * easing
-    const targetY = p5.mouseY
+    mouseX += dx * easing * 2
+    const targetY = p5.mouseY * 3
     const dy = targetY - mouseY
-    mouseY += dy * easing
+    mouseY += dy * easing * 2
+    console.log({ mouseX: p5.mouseX, mouseY: p5.mouseY })
+    // const constrainedX = p5.constrain(mouseX, 400, 1200)
+    // const constrainedY = p5.constrain(mouseY, 0, 1200)
 
     for (let y = 0; y < images.length; y++) {
       for (let x = 0; x < images.length; x++) {
-        p5.image(
-          images[x].src,
-          images[x].width * x +
-            galleryWidth / 3 +
-            -mouseX +
-            images[x].offsetX * x,
-          images[x].height * y +
-            -galleryHeight / 3 +
-            -mouseY +
-            images[x].offsetY * y,
-          images[x].width,
-          images[x].height,
-        )
+        const { src, offsetX, offsetY, width, height } = images[x]
+
+        const left = width * x + -mouseX + offsetX * x + window.innerWidth / 3
+        const top = height * y + -mouseY + offsetY * y + window.innerHeight / 3
+
+        p5.image(src, left, top, width, height)
       }
     }
   }

@@ -16,22 +16,36 @@ const Contact = () => {
       className="grid mt-24 md:gap-20 md:grid-cols-2 max-w-8xl m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16"
     >
       <div className="md:mt-52 flex justify-between">
-        <p className="max-w-xs text-xl">
+        <p className="max-w-xs text-lg">
           I'm always open to collaborations, swaps and skill exchanges. For all
           sales, commissions, collaborations, press and general enquiries please
           contact me.
         </p>
         <ul className="text-right mt-32">
+          <li className="mt-2 mb-12">
+            <p>76 Bushey Hill Road</p>
+            <p>Camberwell</p>
+            <p>London</p>
+            <p>SE5 8QJ</p>
+          </li>
           <li>
-            <a href="https://www.instagram.com/simao_romualdo/" target="_blank">
+            <a
+              className="link leading-tight"
+              href="https://www.instagram.com/simao_romualdo/"
+              target="_blank"
+            >
               instagram
             </a>
           </li>
           <li className="mt-2">
-            <a href="mailto:ioetbc@gmail.com">simao@simaoromualdo.com</a>
+            <a className="link leading-tight" href="tel:07493774943">
+              07493774943
+            </a>
           </li>
           <li className="mt-2">
-            <a href="tel:07493774943">07493774943</a>
+            <a className="link leading-tight" href="mailto:ioetbc@gmail.com">
+              simao@simaoromualdo.com
+            </a>
           </li>
         </ul>
       </div>

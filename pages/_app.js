@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Header showBgColor={pathname === '/' || pathname === '/investigation'} />
+      <Header
+        showBgColor={pathname === '/' || pathname === '/investigation-v2'}
+      />
       <Component {...pageProps} />
       {pathname !== '/' && <Footer />}
     </>

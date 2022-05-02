@@ -146,8 +146,8 @@ body.loading {
     position: absolute;
     top: 0;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    transition-delay: 0s;
+    // transition: opacity 0.3s ease-in-out;
+    // transition-delay: 0s;
   }
   &:after {
     content: '(';
@@ -163,7 +163,7 @@ body.loading {
   &:after,
   &:before {
     opacity: 1;
-    transition-delay: 0.3s; // the time element must come after hover
+    // transition-delay: 0.3s; // the time element must come after hover
   }
 }
 
