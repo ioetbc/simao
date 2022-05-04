@@ -1,6 +1,7 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
-// import { images } from '../database/investigation'
+import { images } from '../database/investigation'
+import Bubble from '../utils/Bubble'
 
 const Sketch = dynamic(() => import('react-p5'), { ssr: false })
 
@@ -8,144 +9,7 @@ export default function Home() {
   let mouseX = 0
   let mouseY = 0
   const easing = 0.04
-
-  const images = [
-    {
-      src: '/images/products/granite-nude-bowls/2.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 0,
-      offsetY: 50,
-      column: 0,
-      row: 1,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/15.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 100,
-      offsetY: 10,
-      column: 1,
-      row: 1,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/11.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 100,
-      offsetY: 150,
-      column: 2,
-      row: 1,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/17.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 100,
-      offsetY: 50,
-      column: 3,
-      row: 1,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/17.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 100,
-      offsetY: 50,
-      column: 4,
-      row: 1,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/2.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 200,
-      offsetY: 50,
-      column: 0,
-      row: 2,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/15.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 100,
-      offsetY: 10,
-      column: 1,
-      row: 2,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/11.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 100,
-      offsetY: 150,
-      column: 2,
-      row: 2,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/17.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 100,
-      offsetY: 50,
-      column: 3,
-      row: 2,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/17.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 100,
-      offsetY: 50,
-      column: 4,
-      row: 2,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/2.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 200,
-      offsetY: 50,
-      column: 0,
-      row: 3,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/15.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 100,
-      offsetY: 10,
-      column: 1,
-      row: 3,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/11.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 100,
-      offsetY: 150,
-      column: 2,
-      row: 3,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/17.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 100,
-      offsetY: 50,
-      column: 3,
-      row: 3,
-    },
-    {
-      src: '/images/products/granite-nude-bowls/17.jpg',
-      width: 326,
-      height: 492,
-      offsetX: 100,
-      offsetY: 50,
-      column: 4,
-      row: 3,
-    },
-  ]
+  const bubbles = []
 
   const preload = (p5) => {
     images.forEach((image, index) => {
@@ -161,19 +25,32 @@ export default function Home() {
     )
   }
 
-  let galleryWidth = 0
-  let galleryHeight = 0
+  const fatReducer = images.reduce(
+    (prev, current) => {
+      const LONGEST_ROW = 2
+      if (current.row === LONGEST_ROW) {
+        prev.width += current.width + current.offsetX
+        prev.height += current.height + current.offsetY
+      }
+      return {
+        width: prev.width,
+        height: prev.height,
+      }
+    },
+    { width: 0, height: 0 },
+  )
 
-  const fatReducer = images.reduce((_, currentValue) => {
-    if (currentValue.row === 2) {
-      galleryWidth = galleryWidth + currentValue.width
-      galleryHeight = galleryHeight + currentValue.height
+  const mapGridPosition = (image, mouseX) => {
+    let position = { positionX: 0, positionY: 0 }
+    console.log('image', image)
+    switch (image.grid) {
+      case 5:
+        position.positionX = image.offsetX
+        position.positionY = image.offsetY
+        break
     }
-    return {
-      width: galleryWidth,
-      height: galleryHeight,
-    }
-  }, 0)
+    return position
+  }
 
   const draw = (p5) => {
     p5.background(255, 254, 242)
@@ -193,12 +70,36 @@ export default function Home() {
     for (let x = 0; x < images.length; x++) {
       const { src, offsetX, offsetY, width, height, column, row } = images[x]
 
-      const left = width * column + shiftgalleryX + -mouseXOffset
-      const top = height * row + shiftgalleryY + -mouseYOffset
-
-      p5.image(src, left, top, width, height)
+      const { positionX, positionY } = mapGridPosition(
+        images[x],
+        mouseX,
+        mouseY,
+      )
+      console.log('positionX', positionX)
+      const bubble = new Bubble({
+        p5,
+        src,
+        x: -mouseX + positionX + window.innerWidth / 2,
+        y: -mouseY + positionY + window.innerHeight / 2,
+        width,
+        height,
+      })
+      bubble.show()
     }
   }
 
-  return <Sketch setup={setup} draw={draw} preload={preload} />
+  const mouseClicked = () => {
+    for (let b of bubbles) {
+      const bubbleClicked = b.clicked(p5.mouseX, p5.mouseY)
+    }
+  }
+
+  return (
+    <Sketch
+      setup={setup}
+      draw={draw}
+      preload={preload}
+      mouseClicked={mouseClicked}
+    />
+  )
 }

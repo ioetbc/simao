@@ -74,7 +74,7 @@ export const Navigation = () => {
           </li>
           <li
             className="cursor-pointer link text-lg"
-            onClick={() => router.push(`/investigation`)}
+            onClick={() => router.push(`/investigation-v2`)}
           >
             Investigation
           </li>
