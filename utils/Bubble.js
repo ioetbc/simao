@@ -6,10 +6,21 @@ export default class Bubble {
     this.y = y
     this.width = width
     this.height = height
+    this.image = null
   }
 
   show() {
-    this.p5.image(this.src, this.x, this.y, this.width, this.height)
+    this.image = this.p5.image(
+      this.src,
+      this.x,
+      this.y,
+      this.width,
+      this.height,
+    )
+  }
+
+  scale() {
+    this.image.resize(0, window.innerHeight)
   }
 
   clicked(mouseX, mouseY) {

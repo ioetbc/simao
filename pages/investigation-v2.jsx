@@ -23,33 +23,20 @@ export default function Home() {
     p5.createCanvas(window.innerWidth, window.innerHeight).parent(
       canvasParentRef,
     )
-  }
 
-  const fatReducer = images.reduce(
-    (prev, current) => {
-      const LONGEST_ROW = 2
-      if (current.row === LONGEST_ROW) {
-        prev.width += current.width + current.offsetX
-        prev.height += current.height + current.offsetY
-      }
-      return {
-        width: prev.width,
-        height: prev.height,
-      }
-    },
-    { width: 0, height: 0 },
-  )
+    let bubble
 
-  const mapGridPosition = (image, mouseX) => {
-    let position = { positionX: 0, positionY: 0 }
-    console.log('image', image)
-    switch (image.grid) {
-      case 5:
-        position.positionX = image.offsetX
-        position.positionY = image.offsetY
-        break
+    for (let x = 0; x < images.length; x++) {
+      bubble = new Bubble({
+        p5,
+        src: images[x].src,
+        x: -mouseX + images[x].offsetX + window.innerWidth / 2,
+        y: -mouseY + images[x].offsetY + window.innerHeight / 2,
+        width: images[x].width,
+        height: images[x].height,
+      })
+      bubbles.push(bubble)
     }
-    return position
   }
 
   const draw = (p5) => {
@@ -62,35 +49,21 @@ export default function Home() {
     mouseX += dx * easing
     mouseY += dy * easing
 
-    const mouseXOffset = mouseX - p5.width / 2
-    const mouseYOffset = mouseY - p5.height / 2
-    const shiftgalleryX = (p5.width - fatReducer.width) / 2
-    const shiftgalleryY = (p5.height - fatReducer.height) / 2
-
-    for (let x = 0; x < images.length; x++) {
-      const { src, offsetX, offsetY, width, height, column, row } = images[x]
-
-      const { positionX, positionY } = mapGridPosition(
-        images[x],
-        mouseX,
-        mouseY,
-      )
-      console.log('positionX', positionX)
-      const bubble = new Bubble({
-        p5,
-        src,
-        x: -mouseX + positionX + window.innerWidth / 2,
-        y: -mouseY + positionY + window.innerHeight / 2,
-        width,
-        height,
-      })
-      bubble.show()
+    for (let x = 0; x < bubbles.length; x++) {
+      bubbles[x].x = -mouseX + images[x].offsetX + window.innerWidth / 2
+      bubbles[x].y = -mouseY + images[x].offsetY + window.innerHeight / 2
+      bubbles[x].show()
     }
   }
 
   const mouseClicked = () => {
-    for (let b of bubbles) {
-      const bubbleClicked = b.clicked(p5.mouseX, p5.mouseY)
+    for (let x = 0; x < bubbles.length; x++) {
+      const bubbleClicked = bubbles[x].clicked(mouseX, mouseY)
+      if (bubbleClicked) {
+        console.log(bubbles[x].src)
+        // bubbles[x].scale()
+        bubbles[x].src.resize(1000, 1000)
+      }
     }
   }
 
