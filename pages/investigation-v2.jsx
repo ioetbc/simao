@@ -1,6 +1,6 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
-import { images } from '../database/investigation'
+import { getImages } from '../database/investigation'
 import Bubble from '../utils/Bubble'
 
 const Sketch = dynamic(() => import('react-p5'), { ssr: false })
@@ -8,10 +8,14 @@ const Sketch = dynamic(() => import('react-p5'), { ssr: false })
 export default function Home() {
   let mouseX = 0
   let mouseY = 0
-  const easing = 0.04
+  const easing = 0.1
+  let images = []
   const bubbles = []
 
   const preload = (p5) => {
+    console.log('window', window)
+
+    images = getImages(window.innerWidth, window.innerHeight)
     images.forEach((image, index) => {
       p5.loadImage(image.src, (loadedImage) => {
         images[index].src = loadedImage
@@ -41,9 +45,9 @@ export default function Home() {
 
   const draw = (p5) => {
     p5.background(255, 254, 242)
-    const targetX = p5.mouseX
+    const targetX = p5.mouseX * 2
     const dx = targetX - mouseX
-    const targetY = p5.mouseY
+    const targetY = p5.mouseY * 2
     const dy = targetY - mouseY
 
     mouseX += dx * easing

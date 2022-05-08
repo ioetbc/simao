@@ -17,8 +17,8 @@ const About = () => {
     >
       <div className="mt-52 mb-32">
         <div className="">
-          <div className="lg:flex">
-            <div className="lg:max-w-xl mb-12 md:ml-20 lg:mb-32 lg:ml-60">
+          <div className="lg:flex gap-40">
+            <div className="mb-12 md:ml-20 md:max-w-md lg:ml-0 lg:max-w-md lg:mb-32 xl:ml-0 xl:max-w-xl">
               <p className="text-xl">
                 My favourite place to be is the moment where I am not bound by
                 thought, but rather in a state of pure physical being. Making
@@ -42,7 +42,7 @@ const About = () => {
                 and these artifacts, are imprints of my soul and love.
               </p>
             </div>
-            <div className="mb-12 lg:ml-auto lg:max-w-xl lg:mt-72">
+            <div className="mb-12 md:max-w-md md:ml-auto lg:max-w-xl lg:mt-72">
               <p className="text-xl">
                 In today's world - where we are often surrounded by digital
                 experiences - I invite everyone to slow down through my work, to
@@ -63,7 +63,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <p className="lg:max-w-xl lg:mt-60 text-lg">
+          <p className="md:ml-20 md:max-w-md lg:max-w-xl lg:mt-60 text-lg">
             I recognise that a contemporary ceramics practice can be
             ecologically damaging due to its reliance on mined raw materials and
             energy for firings. In an effort to reduce my environmental impact,
