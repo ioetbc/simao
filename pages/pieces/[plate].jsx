@@ -1,13 +1,9 @@
-import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
-import { Carousel } from 'react-responsive-carousel'
 
 import { plates } from '../../database/products'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const Plates = () => {
-  const [carouselIndex, setCarouselIndex] = useState(0)
   const router = useRouter()
   const { plate } = router.query
   const product = plates?.find((item) => plate === item.sku)
@@ -24,18 +20,17 @@ const Plates = () => {
           opacity: 1,
         },
       }}
-      className="relative grid mt-24 md:gap-20 md:grid-cols-2 m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16"
+      className="relative grid mt-24 md:gap-10 md:grid-cols-2 m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16"
     >
-      <div className="mt-28 mr-4 md:mt-48 flex gap-4 flex-col max-w-2xl">
+      <div className="mt-28 mr-4 md:mt-48 flex gap-4 flex-col max-w-2xl mb-14">
         {product?.imageCarousel.map((image) => (
           <img src={image} alt={image.sku} />
         ))}
-        <p className="text-right mt-2">( {carouselIndex + 1} )</p>
       </div>
 
       <div>
         <div className="md:mt-72 sticky top-28 pr-8 max-w-2xl">
-          <h1 className="text-2xl ">{product?.sku}</h1>
+          <h1 className="text-2xl ">{product?.pre}</h1>
           <ul className="flex gap-10 mt-10 mb-10 ">
             <div>
               <li>edition</li>
@@ -43,8 +38,6 @@ const Plates = () => {
               <li>material</li>
 
               <li>dimensions</li>
-
-              <li>price</li>
             </div>
             <div>
               <li>1</li>
@@ -52,8 +45,6 @@ const Plates = () => {
               <li>ceramic, copper glaze</li>
 
               <li>w: 15cm h: 10cm</li>
-
-              <li>£50</li>
             </div>
           </ul>
           <p>{product?.description}</p>

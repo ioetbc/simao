@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Cookies from 'js-cookie'
 
 import { motion } from 'framer-motion'
 
@@ -70,11 +71,15 @@ const images = [
 ]
 
 export const ProductLoader = ({ setLoading }) => {
+  const handleAnimationComplete = () => {
+    setLoading(false)
+    Cookies.set('picesLoaded', true, { expires: 1 })
+  }
   return (
     <motion.div className="loader">
       <motion.div
         variants={container}
-        onAnimationComplete={() => setLoading(false)}
+        onAnimationComplete={handleAnimationComplete}
         initial="hidden"
         animate="show"
         exit="exit"

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import Cookies from 'js-cookie'
 
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import styled from 'styled-components'
@@ -14,6 +15,11 @@ const Products = () => {
   const router = useRouter()
 
   useEffect(() => {
+    const hasShownAnimation = Cookies.get('picesLoaded')
+    if (hasShownAnimation) {
+      setLoading(false)
+      return
+    }
     loading
       ? document.querySelector('body').classList.add('loading')
       : document.querySelector('body').classList.remove('loading')
@@ -26,10 +32,13 @@ const Products = () => {
       props.index % 2 === 0 ? props.product.offsetX : -props.product.offsetX}vw;
     margin-left: ${(props) => props.index % 2 !== 0 && 'auto'};
     margin-top: 100px;
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1320px) {
       width: ${(props) => props.product.width}px;
-      height: ${(props) => props.product.width}px;
+      height: 100%;
       margin-top: ${(props) => props?.product?.offsetY}px;
+      &:last-child {
+        margin-bottom: 100px;
+      }
     }
     .details {
       opacity: 0;
@@ -80,13 +89,12 @@ const Products = () => {
                       placeholder="blur"
                       width={product.width}
                       height={product.height}
-                      onClick={() => router.push(`/plates/${product.sku}`)}
+                      onClick={() => router.push(`/pieces/${product.sku}`)}
                     />
                     <div className="flex gap-20 mt-4 details">
                       <div>
                         <p>{product.pre}</p>
                       </div>
-                      {/* <p>{product.date}</p> */}
                     </div>
                   </div>
                 </motion.div>

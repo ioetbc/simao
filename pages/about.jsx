@@ -42,7 +42,7 @@ const About = () => {
                 and these artifacts, are imprints of my soul and love.
               </p>
             </div>
-            <div className="mb-12 md:max-w-md md:ml-auto lg:max-w-xl lg:mt-72">
+            <div className="mb-12 md:max-w-md md:ml-auto lg:max-w-xl lg:mt-80">
               <p className="text-xl">
                 In today's world - where we are often surrounded by digital
                 experiences - I invite everyone to slow down through my work, to
@@ -50,11 +50,11 @@ const About = () => {
                 being. Like every human on this earth my pieces are unique, one
                 of a kind, and in them imperfection is celebrated. They embrace
                 no material hierarchy, but are guided by a nature-based
-                aesthetic.
+                aesthetic. Through my pieces I hope to inspire a connection and
+                revive an awareness with the natural world and the source of our
+                beings.
               </p>
               <p className="mt-4 text-xl">
-                Through my pieces I hope to inspire a connection and revive an
-                awareness with the natural world and the source of our beings.
                 Brazilian born, trained in England with a background in Interior
                 &amp; Spatial Design, I began working in ceramics in 2021 and
                 continue my practice-led exploration into functional and
@@ -63,7 +63,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <p className="md:ml-20 md:max-w-md lg:max-w-xl lg:mt-60 text-lg">
+          <p className="md:ml-20 md:max-w-md lg:max-w-xl lg:-mt-10 text-lg">
             I recognise that a contemporary ceramics practice can be
             ecologically damaging due to its reliance on mined raw materials and
             energy for firings. In an effort to reduce my environmental impact,

@@ -13,14 +13,30 @@ export default function Home() {
   const bubbles = []
 
   const preload = (p5) => {
-    console.log('window', window)
-
     images = getImages(window.innerWidth, window.innerHeight)
     images.forEach((image, index) => {
       p5.loadImage(image.src, (loadedImage) => {
         images[index].src = loadedImage
       })
     })
+  }
+
+  const mapImagesToGrid = (image) => {
+    switch (image.grid) {
+      case 1:
+        image.offsetX = window.innerWidth - image.width / 2
+        image.offsetY = window.innerHeight - image.height / 2
+        break
+      case 2:
+        image.offsetX = window.innerWidth * 2 - image.width / 2
+        image.offsetY = window.innerHeight - image.height / 2
+
+        break
+    }
+    return {
+      x: image.offsetX,
+      y: image.offsetY,
+    }
   }
 
   const setup = (p5, canvasParentRef) => {
@@ -31,11 +47,12 @@ export default function Home() {
     let bubble
 
     for (let x = 0; x < images.length; x++) {
+      const position = mapImagesToGrid(images[x])
       bubble = new Bubble({
         p5,
         src: images[x].src,
-        x: -mouseX + images[x].offsetX + window.innerWidth / 2,
-        y: -mouseY + images[x].offsetY + window.innerHeight / 2,
+        x: -mouseX + position.x,
+        y: -mouseY + position.y,
         width: images[x].width,
         height: images[x].height,
       })
@@ -54,8 +71,9 @@ export default function Home() {
     mouseY += dy * easing
 
     for (let x = 0; x < bubbles.length; x++) {
-      bubbles[x].x = -mouseX + images[x].offsetX + window.innerWidth / 2
-      bubbles[x].y = -mouseY + images[x].offsetY + window.innerHeight / 2
+      const position = mapImagesToGrid(images[x])
+      bubbles[x].x = -mouseX + position.x
+      bubbles[x].y = -mouseY + position.y
       bubbles[x].show()
     }
   }
@@ -64,8 +82,6 @@ export default function Home() {
     for (let x = 0; x < bubbles.length; x++) {
       const bubbleClicked = bubbles[x].clicked(mouseX, mouseY)
       if (bubbleClicked) {
-        console.log(bubbles[x].src)
-        // bubbles[x].scale()
         bubbles[x].src.resize(1000, 1000)
       }
     }

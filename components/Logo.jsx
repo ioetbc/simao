@@ -1,9 +1,18 @@
+import { useState, useEffect } from 'react'
+import Cookies from 'js-cookie'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 
 export const Logo = () => {
+  const [hasShownAnimation, setHasShownAnimation] = useState(false)
   const router = useRouter()
   const transition = { duration: 0.5, ease: 'easeInOut' }
+
+  useEffect(() => {
+    setHasShownAnimation(Cookies.get('headerAnimationRun'))
+  }, [])
+
+  console.log('hasShownAnimation', hasShownAnimation)
 
   return (
     <svg
@@ -32,7 +41,7 @@ export const Logo = () => {
           transform="translate(-0.48 -0.81)"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ ...transition, delay: 0.5 }}
+          transition={!hasShownAnimation && { ...transition, delay: 0.5 }}
         />
 
         <motion.path
@@ -41,7 +50,7 @@ export const Logo = () => {
           transform="translate(-0.48 -0.81)"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ ...transition, delay: 1.5 }}
+          transition={!hasShownAnimation && { ...transition, delay: 1.5 }}
         />
 
         <motion.path
@@ -50,7 +59,7 @@ export const Logo = () => {
           transform="translate(-0.48 -0.81)"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ ...transition, delay: 1 }}
+          transition={!hasShownAnimation && { ...transition, delay: 1 }}
         />
       </g>
     </svg>

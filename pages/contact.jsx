@@ -22,12 +22,6 @@ const Contact = () => {
           contact me.
         </p>
         <ul className="text-right mt-32">
-          <li className="mt-2 mb-12">
-            <p>76 Bushey Hill Road</p>
-            <p>Camberwell</p>
-            <p>London</p>
-            <p>SE5 8QJ</p>
-          </li>
           <li>
             <a
               className="link leading-tight"
