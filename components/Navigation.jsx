@@ -1,7 +1,35 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { IoGridOutline, IoCloseCircleOutline } from 'react-icons/io5'
+import { Logo } from './Logo'
+
 import { motion } from 'framer-motion'
+import styled from 'styled-components'
+
+const AnimatedMenuItems = styled.div`
+  .item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .sub-link {
+    font-size: 24px;
+  }
+  li {
+    font-size: 32px;
+    line-height: 64px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  /* .link:focus,
+  .link:active {
+    background: red;
+    height: 200px;
+    width: 20px;
+  } */
+`
 
 export const Navigation = () => {
   const router = useRouter()
@@ -24,7 +52,7 @@ export const Navigation = () => {
         <ul
           className="text-left pl-4 h-screen z-50 pr-4"
           style={{
-            width: openMobileMenu ? '70vw' : 20,
+            width: openMobileMenu ? '100vw' : 20,
             height: openMobileMenu ? '100vh' : 0,
             background: '#e9e8dd',
             position: openMobileMenu ? 'fixed' : 'relative',
@@ -32,30 +60,80 @@ export const Navigation = () => {
             right: 0,
             paddingRight: '1rem',
             marginTop: openMobileMenu ? '-1rem' : 0,
-            paddingTop: openMobileMenu ? '1rem' : 0,
+            // paddingTop: openMobileMenu ? '1rem' : 0,
           }}
         >
           {openMobileMenu ? (
             <>
+              <div>
+                <Logo showAnimation={true} className="absolute top-3" />
+              </div>
               <div
-                className="cursor-pointer absolute right-3"
+                className="cursor-pointer absolute right-3 top-3"
                 onClick={() => setOpenMobileMenu(!openMobileMenu)}
               >
                 <IoCloseCircleOutline size={23} color="#333" />
               </div>
-              <li className="cursor-pointer">About</li>
-              <li
-                className="cursor-pointer relative"
-                onClick={() => router.push(`/pieces`)}
-              >
-                Pieces
-              </li>
-              <li
-                className="cursor-pointer"
-                onClick={() => router.push(`/contact`)}
-              >
-                Contact
-              </li>
+              <AnimatedMenuItems>
+                <div className="item-container">
+                  <li>About</li>
+                  <li
+                    className="cursor-pointer link text-lg"
+                    onClick={() => setOpen(!open)}
+                  >
+                    Pieces
+                  </li>
+                  {open && (
+                    <ul className="mt-2 md:absolute">
+                      <li
+                        className="cursor-pointer link sub-link"
+                        onClick={() =>
+                          handleRouteChange({
+                            path: 'products',
+                            page: 'vesels',
+                          })
+                        }
+                      >
+                        vesels
+                      </li>
+                      <li
+                        className="cursor-pointer link sub-link"
+                        onClick={() =>
+                          handleRouteChange({
+                            path: 'products',
+                            page: 'teaBowls',
+                          })
+                        }
+                      >
+                        tea bowls
+                      </li>
+                      <li
+                        className="cursor-pointer link sub-link"
+                        onClick={() =>
+                          handleRouteChange({
+                            path: 'products',
+                            page: 'bowls',
+                          })
+                        }
+                      >
+                        bowls
+                      </li>
+                      <li
+                        className="cursor-pointer link sub-link"
+                        onClick={() =>
+                          handleRouteChange({
+                            path: 'products',
+                            page: 'plates',
+                          })
+                        }
+                      >
+                        plates
+                      </li>
+                    </ul>
+                  )}
+                  <li onClick={() => router.push(`/contact`)}>Contact</li>
+                </div>
+              </AnimatedMenuItems>
             </>
           ) : (
             <div

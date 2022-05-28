@@ -24,7 +24,7 @@ export const Title = ({ hasShownAnimation }) => {
 
 const Content = () => {
   return (
-    <div className="absolute bottom-4 left-4 md:bottom-12 md:left-8 z-10">
+    <div className="absolute bottom-4 left-4 md:bottom-12 md:left-8 z-10 hidden md:block">
       <h1 className="uppercase text-2xl relative">sim&Atilde;o romualdo</h1>
       <p className="mt-2 text-xl">Shaped by emotion, informed by nature</p>
     </div>

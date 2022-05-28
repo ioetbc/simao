@@ -21,24 +21,6 @@ export default function Home() {
     })
   }
 
-  const mapImagesToGrid = (image) => {
-    switch (image.grid) {
-      case 1:
-        image.offsetX = window.innerWidth - image.width / 2
-        image.offsetY = window.innerHeight - image.height / 2
-        break
-      case 2:
-        image.offsetX = window.innerWidth * 2 - image.width / 2
-        image.offsetY = window.innerHeight - image.height / 2
-
-        break
-    }
-    return {
-      x: image.offsetX,
-      y: image.offsetY,
-    }
-  }
-
   const setup = (p5, canvasParentRef) => {
     p5.createCanvas(window.innerWidth, window.innerHeight).parent(
       canvasParentRef,
@@ -57,6 +39,27 @@ export default function Home() {
         height: images[x].height,
       })
       bubbles.push(bubble)
+    }
+  }
+
+  const mapImagesToGrid = (image) => {
+    let offsetX
+    let offsetY
+
+    switch (image.grid) {
+      case 1:
+        offsetX = window.innerWidth - image.width / 2 + image.offsetX
+        offsetY = window.innerHeight - image.height / 2 + image.offsetY
+        break
+      case 2:
+        offsetX = window.innerWidth * 2 - image.width / 2 + image.offsetX
+        offsetY = window.innerHeight - image.height / 2 + image.offsetY
+
+        break
+    }
+    return {
+      x: offsetX,
+      y: offsetY,
     }
   }
 
@@ -79,10 +82,17 @@ export default function Home() {
   }
 
   const mouseClicked = () => {
+    console.log('clicked on')
     for (let x = 0; x < bubbles.length; x++) {
-      const bubbleClicked = bubbles[x].clicked(mouseX, mouseY)
+      const position = mapImagesToGrid(images[x])
+      const bubbleClicked = bubbles[x].clicked(
+        mouseX + position.x,
+        mouseY + position.y,
+      )
+      console.log('bubbleClicked', bubbleClicked)
       if (bubbleClicked) {
-        bubbles[x].src.resize(1000, 1000)
+        console.log('clicked on', bubbles[x])
+        // bubbles[x].src.resize(1000, 1000)
       }
     }
   }
