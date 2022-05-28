@@ -24,12 +24,25 @@ export default class Bubble {
   }
 
   clicked(mouseX, mouseY) {
-    return true
-    // return (
-    //   mouseX > this.x &&
+    // mouseX > this.x &&
     //   mouseX < this.x + this.width &&
     //   mouseY > this.y &&
     //   mouseY < this.y + this.height
-    // )
+
+    console.log('mouseX', mouseX)
+    console.log('this.x', this.x)
+    console.log('this.width', this.width)
+    console.log('this.x + this.width', this.x + this.width)
+
+    if (true) {
+      console.log('clicked')
+      const ratio = Math.min(
+        window.innerWidth / this.width,
+        window.innerHeight / this.height,
+      )
+      this.width = this.width * ratio
+      this.height = this.height * ratio
+      // this.src.resize(this.width, this.height)
+    }
   }
 }

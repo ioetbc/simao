@@ -85,15 +85,22 @@ export default function Home() {
     console.log('clicked on')
     for (let x = 0; x < bubbles.length; x++) {
       const position = mapImagesToGrid(images[x])
-      const bubbleClicked = bubbles[x].clicked(
-        mouseX + position.x,
-        mouseY + position.y,
-      )
-      console.log('bubbleClicked', bubbleClicked)
-      if (bubbleClicked) {
-        console.log('clicked on', bubbles[x])
-        // bubbles[x].src.resize(1000, 1000)
-      }
+      const targetX = mouseX * 2
+      const dx = targetX - mouseX
+      const targetY = mouseY * 2
+      const dy = targetY - mouseY
+
+      let hmmX = dx * easing
+      let hmmY = dy * easing
+      const bubbleClicked = bubbles[x].clicked(position.x, position.y)
+      // console.log('bubbleClicked', bubbleClicked)
+      // if (bubbleClicked) {
+      // const hmm = window.innerWidth / 1000
+      // console.log('clicked on', bubbles[x])
+      // bubbles[x].image.resize(50, 100)
+      // bubbles[x].width = window.innerWidth * hmm
+      // bubbles[x].height = bubbles.height * hmm
+      // }
     }
   }
 
