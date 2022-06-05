@@ -1,13 +1,16 @@
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
-
 import { plates } from '../../database/products'
 
 const Plates = () => {
   const router = useRouter()
   const { plate } = router.query
   const product = plates?.find((item) => plate === item.sku)
-
+  console.log(
+    'product?.imageCarousel.map((image)',
+    product?.imageCarousel.map((image) => console.log(image)),
+  )
   return (
     <motion.div
       initial="hidden"
@@ -23,9 +26,16 @@ const Plates = () => {
       className="relative grid mt-24 md:gap-10 md:grid-cols-2 m-4 md:mt-0 md:mr-0 md:mb-0 md:ml-16"
     >
       <div className="mt-28 mr-4 md:mt-48 flex gap-4 flex-col max-w-2xl mb-14">
-        {product?.imageCarousel.map((image) => (
-          <img src={image} alt={image.sku} />
-        ))}
+        <div>
+          {product?.imageCarousel.map((image) => (
+            <Image
+              src={image}
+              alt={image.sku}
+              width={image.width}
+              height={image.height}
+            />
+          ))}
+        </div>
       </div>
 
       <div>
