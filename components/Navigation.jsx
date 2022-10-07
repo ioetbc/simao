@@ -149,7 +149,7 @@ export const Navigation = () => {
       <nav className="flex justify-end gap-8 hidden md:block">
         <ul className="flex gap-8">
           <li
-            onClick={() => router.push(`/about2`)}
+            onClick={() => router.push(`/about`)}
             className="cursor-pointer link text-lg"
           >
             About
@@ -157,29 +157,11 @@ export const Navigation = () => {
           <div className="relative">
             <li
               className="cursor-pointer link text-lg"
-              onClick={() => setOpen(!open)}
+              onClick={() => router.push(`/pieces`)}
             >
               Products
             </li>
-            {open && (
-              <ul className="mt-2 absolute">
-                <li
-                  className="cursor-pointer link"
-                  onClick={() =>
-                    handleRouteChange({ path: 'products', page: 'goblets' })
-                  }
-                >
-                  Goblets
-                </li>
-              </ul>
-            )}
           </div>
-          <li
-            className="cursor-pointer link text-lg"
-            onClick={() => router.push(`/investigation-v2`)}
-          >
-            Investigation
-          </li>
           <li
             className="cursor-pointer link text-lg"
             onClick={() => router.push(`/contact`)}
