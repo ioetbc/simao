@@ -81,25 +81,13 @@ export default function Home() {
     }
   }
 
-  const mouseClicked = () => {
+  const mouseClicked = (p5) => {
     console.log('clicked on')
     for (let x = 0; x < bubbles.length; x++) {
-      const position = mapImagesToGrid(images[x])
-      const targetX = mouseX * 2
-      const dx = targetX - mouseX
-      const targetY = mouseY * 2
-      const dy = targetY - mouseY
-
-      let hmmX = dx * easing
-      let hmmY = dy * easing
-      const bubbleClicked = bubbles[x].clicked(position.x, position.y)
-      // console.log('bubbleClicked', bubbleClicked)
-      // if (bubbleClicked) {
-      // const hmm = window.innerWidth / 1000
-      // console.log('clicked on', bubbles[x])
-      // bubbles[x].image.resize(50, 100)
-      // bubbles[x].width = window.innerWidth * hmm
-      // bubbles[x].height = bubbles.height * hmm
+      const clickedOnImage = bubbles[x].clicked(p5.mouseX, p5.mouseY)
+      // TODO hide the images that were not clicked if an image was clicked
+      // if (clickedOnImage) {
+      //   bubbles[x].hide()
       // }
     }
   }

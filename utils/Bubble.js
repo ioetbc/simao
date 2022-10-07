@@ -6,6 +6,8 @@ export default class Bubble {
     this.y = y
     this.width = width
     this.height = height
+    this.originalWidth = width
+    this.originalHeight = height
     this.image = null
   }
 
@@ -24,25 +26,26 @@ export default class Bubble {
   }
 
   clicked(mouseX, mouseY) {
-    // mouseX > this.x &&
-    //   mouseX < this.x + this.width &&
-    //   mouseY > this.y &&
-    //   mouseY < this.y + this.height
+    const mouseover =
+      mouseX > this.x &&
+      mouseX < this.x + this.width &&
+      mouseY > this.y &&
+      mouseY < this.y + this.height
 
-    console.log('mouseX', mouseX)
-    console.log('this.x', this.x)
-    console.log('this.width', this.width)
-    console.log('this.x + this.width', this.x + this.width)
-
-    if (true) {
-      console.log('clicked')
+    console.log('mouseover', mouseover)
+    if (!mouseover) {
+      console.log('not over')
+      this.width = this.originalWidth
+      this.height = this.originalHeight
+    }
+    if (mouseover) {
       const ratio = Math.min(
         window.innerWidth / this.width,
         window.innerHeight / this.height,
       )
       this.width = this.width * ratio
       this.height = this.height * ratio
-      // this.src.resize(this.width, this.height)
     }
+    return mouseover
   }
 }
