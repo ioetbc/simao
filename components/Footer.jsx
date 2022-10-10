@@ -6,10 +6,7 @@ export const Footer = () => (
       </a>
     </li>
     <li className="link mt-4">
-      <a href="mailto:ioetbc@gmail.com">email</a>
-    </li>
-    <li className="link mt-4">
-      <a href="tel:07493774943">phone</a>
+      <a href="mailto:simaoromualdo@icloud.com">email</a>
     </li>
   </ul>
 )

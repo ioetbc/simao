@@ -11,7 +11,7 @@ module.exports = {
       },
     },
     colors: {
-      lightGreen: '#fffef2',
+      lightGreen: '#EEECEA',
     },
   },
   plugins: [],

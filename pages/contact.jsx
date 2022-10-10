@@ -31,14 +31,10 @@ const Contact = () => {
               instagram
             </a>
           </li>
+        
           <li className="mt-2">
-            <a className="link leading-tight" href="tel:07493774943">
-              07493774943
-            </a>
-          </li>
-          <li className="mt-2">
-            <a className="link leading-tight" href="mailto:ioetbc@gmail.com">
-              simao@simaoromualdo.com
+            <a className="link leading-tight" href="mailto:simaoromualdo@icloud.com">
+              simaoromualdo@icloud.com
             </a>
           </li>
         </ul>

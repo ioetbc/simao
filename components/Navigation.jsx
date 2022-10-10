@@ -157,9 +157,9 @@ export const Navigation = () => {
           <div className="relative">
             <li
               className="cursor-pointer link text-lg"
-              onClick={() => router.push(`/pieces`)}
+              onClick={() => router.push(`/works`)}
             >
-              Products
+              Works
             </li>
           </div>
           <li

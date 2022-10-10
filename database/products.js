@@ -16,6 +16,12 @@ const offset = {
 }
 
 const dimensions = {
+  square: {
+    large: {
+      width: 1910,
+      height: 1799,
+    },
+  },
   portrait: {
     small: {
       width: 320,
@@ -48,265 +54,718 @@ const dimensions = {
 
 export const plates = [
   {
-    sku: 'crater-buff-chawan',
-    pre: 'crater buff chawan',
+    sku: 'moon-jar',
+    pre: 'Moon Jar',
     offsetX: offset.x.two,
     offsetY: offset.y.five,
-    ...dimensions.portrait.medium,
-    thumbnail: '/images/products/crater-buff-chawan/1.jpg',
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/moon-jar/moon-jar-1.jpg',
     imageCarousel: [
       {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
+        src: '/images/products/moon-jar/moon-jar-1.jpg',
+        ...dimensions.landscape.medium,
       },
       {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
+        src: '/images/products/moon-jar/moon-jar-2.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/moon-jar/moon-jar-3.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/moon-jar/moon-jar-4.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/moon-jar/moon-jar-5.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/moon-jar/moon-jar-6.jpg',
+        ...dimensions.portrait.large,
+      },
+      {
+        src: '/images/products/moon-jar/moon-jar-7.jpg',
+        ...dimensions.landscape.medium,
       },
     ],
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+       'Coiled with layers of black clay blend, slips gathered from Dulwich Woods, embedded with crushed granite stones.',
+    dimensions: 'Approx. 40cm Dia. x 45cm H',
+    designer: 'Ikebana arrangement by Wagner Kreush.'
   },
   {
-    sku: 'porcelain-incision-bowls',
-    pre: 'porcelain incision bowls',
-    offsetX: offset.x.two,
-    offsetY: -offset.y.five,
-    ...dimensions.portrait.medium,
-    thumbnail: '/images/products/porcelain-incision-bowls/1.jpg',
-    imageCarousel: [
-      {
-        src: '/images/products/porcelain-incision-bowls/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-      {
-        src: '/images/products/porcelain-incision-bowls/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-    ],
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  },
-  {
-    sku: 'mixed-clay-bowls',
-    pre: 'mixed clay bowls',
-    offsetX: offset.x.one,
-    offsetY: offset.y.five,
-    ...dimensions.portrait.medium,
-    thumbnail: '/images/products/mixed-clay-bowls/1.jpg',
-    imageCarousel: [
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-    ],
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  },
-
-  {
-    sku: 'granite-bowl',
-    pre: 'Mixed glazes and oxides',
-    offsetX: offset.x.two,
-    offsetY: offset.y.five,
-    ...dimensions.landscape.medium,
-    thumbnail: '/images/products/granite-nude-bowls/1.jpg',
-    imageCarousel: [
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-    ],
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  },
-  {
-    sku: 'crater-reactive-chawan',
-    pre: 'crater reactive chawan',
-    offsetX: offset.x.two,
-    offsetY: offset.y.two,
-    ...dimensions.portrait.medium,
-    thumbnail: '/images/products/crater-reactive-chawan/1.jpg',
-    imageCarousel: [
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-    ],
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  },
-  {
-    sku: 'granite-nude-bowl',
-    pre: 'Mixed glazes and oxides',
-    offsetX: offset.x.one,
-    offsetY: offset.y.four,
-    ...dimensions.landscape.medium,
-    thumbnail: '/images/products/granite-nude-bowls/12.jpg',
-    imageCarousel: [
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-    ],
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  },
-  {
-    sku: 'sand-plates',
-    pre: 'sand plates',
-    offsetX: offset.x.two,
-    offsetY: offset.y.two,
-    ...dimensions.portrait.medium,
-    thumbnail: '/images/products/sand-plates/1.jpg',
-    imageCarousel: [
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-    ],
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  },
-  {
-    sku: 'black-moon-bowl',
-    pre: 'black moon bowl',
-    offsetX: offset.x.two,
-    offsetY: offset.y.five,
-    ...dimensions.landscape.medium,
-    thumbnail: '/images/products/black-moon-bowl/1.jpg',
-    imageCarousel: [
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-    ],
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  },
-  {
-    sku: 'crank-buff-chawan',
-    pre: 'crank buff chawan',
-    offsetX: offset.x.two,
-    offsetY: offset.y.two,
-    ...dimensions.landscape.medium,
-    thumbnail: '/images/products/crank-buff-chawan/1.jpg',
-    imageCarousel: [
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-    ],
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  },
-
-  {
-    sku: 'metal-terracotta-chawan',
-    pre: 'metal terracotta chawan',
-    offsetX: offset.x.two,
-    offsetY: offset.y.two,
-    ...dimensions.portrait.medium,
-    thumbnail: '/images/products/metal-terracotta-chawan/1.jpg',
-    imageCarousel: [
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-      {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
-      },
-    ],
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  },
-  {
-    sku: 'sake-cups',
-    pre: 'sake cups',
+    sku: 'blue-crater-bowl',
+    pre: 'Blue Crater Bowl',
     offsetX: offset.x.three,
     offsetY: offset.y.five,
-    ...dimensions.landscape.medium,
-    thumbnail: '/images/products/sake-cups/1.jpg',
+    ...dimensions.square.large,
+    thumbnail: '/images/products/blue-crater-bowl/blue-crater-bowl-1.jpg',
     imageCarousel: [
       {
-        src: '/images/products/crater-buff-chawan/1.jpg',
-        ...dimensions.portrait.medium,
+        src: '/images/products/blue-crater-bowl/blue-crater-bowl-1.jpg',
+        ...dimensions.square.large,
       },
       {
-        src: '/images/products/crater-buff-chawan/1.jpg',
+        src: '/images/products/blue-crater-bowl/blue-crater-bowl-2.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/blue-crater-bowl/blue-crater-bowl-3.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/blue-crater-bowl/blue-crater-bowl-4.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/blue-crater-bowl/blue-crater-bowl-5.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/blue-crater-bowl/blue-crater-bowl-6.jpg',
         ...dimensions.portrait.medium,
       },
+    
     ],
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+       'Hand-built sculptural bowl in a blend of porcelain and recycled clays, with a blue and lavender crater volcanic glaze.',
+    dimensions: 'Approx. 35cm Dia. x 15cm H',
+    designer: 'Ikebana arrangement by Wagner Kreush.'
   },
   {
-    sku: 'surface-of-the-moon',
-    pre: 'surface of the moon',
-    offsetX: offset.x.one,
-    offsetY: offset.y.three,
-    ...dimensions.portrait.medium,
-    thumbnail: '/images/products/surface-of-the-moon/1.jpg',
+    sku: 'black-crater-bowl',
+    pre: 'Black Crater Bowl',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/black-crater-bowl/black-crater-bowl-1.jpg',
     imageCarousel: [
       {
-        src: '/images/products/crater-buff-chawan/1.jpg',
+        src: '/images/products/black-crater-bowl/black-crater-bowl-1.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/black-crater-bowl/black-crater-bowl-2.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/black-crater-bowl/black-crater-bowl-3.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/black-crater-bowl/black-crater-bowl-4.jpg',
         ...dimensions.portrait.medium,
       },
       {
-        src: '/images/products/crater-buff-chawan/1.jpg',
+        src: '/images/products/black-crater-bowl/black-crater-bowl-5.jpg',
+        ...dimensions.portrait.large,
+      },
+      {
+        src: '/images/products/black-crater-bowl/black-crater-bowl-6.jpg',
         ...dimensions.portrait.medium,
       },
+      {
+        src: '/images/products/black-crater-bowl/black-crater-bowl-7.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/black-crater-bowl/black-crater-bowl-8.jpg',
+        ...dimensions.portrait.medium,
+      },
+    
     ],
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+       'Hand-built sculptural bowl in black clay, with a grey and black volcanic glaze.',
+    dimensions: 'Approx. 35cm Dia. x 15cm H',
+    designer: 'Ikebana arrangements by Wagner Kreush for the British Flower Week at the Garden Museum - London.'
   },
   {
-    sku: 'terracotta-crater-chawan',
-    pre: 'terracotta crater chawan',
+    sku: 'white-crater-bowls',
+    pre: 'White Crater Bowls',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/white-crater-bowls/white-crater-bowl-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/white-crater-bowls/white-crater-bowl-1.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/white-crater-bowls/white-crater-bowl-2.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/white-crater-bowls/white-crater-bowl-3.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/white-crater-bowls/white-crater-bowl-4.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/white-crater-bowls/white-crater-bowl-5.jpg',
+        ...dimensions.landscape.large,
+      },
+      
+    ],
+    description:
+       'Hand-built sculptural bowls in a blend of porcelain and recycled clays, with a white crater volcanic glaze and granite dust, fired 4 times.',
+    dimensions: 'Large Bowl Approx. 40cm Dia. x 25cm H',
+    secondDimensions: 'Small Bowls Approx. 15cm Dia. x 8cm H',
+    
+  },
+  {
+    sku: 'white-crater-&-granite-vessel',
+    pre: 'White Crater & Granite Vessel',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/white-crater-&-granite-vessel/white-crater-&-granite-vessel-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/white-crater-&-granite-vessel/white-crater-&-granite-vessel-1.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/white-crater-&-granite-vessel/white-crater-&-granite-vessel-2.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/white-crater-&-granite-vessel/white-crater-&-granite-vessel-3.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/white-crater-&-granite-vessel/white-crater-&-granite-vessel-4.jpg',
+        ...dimensions.landscape.medium,
+      },
+      
+    ],
+    description:
+       'Coiled sculptural vessel in a blend of porcelain and recycled clays, with a white crater volcanic glaze and crushed granite stones, fired 5 times.',
+    dimensions: 'Approx. 30cm Dia. x 55cm H',
+  },
+  {
+    sku: 'terra-bowl',
+    pre: 'Terra Bowl',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/terra-bowl/terra-bowl-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/terra-bowl/terra-bowl-1.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/terra-bowl/terra-bowl-2.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/terra-bowl/terra-bowl-3.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/terra-bowl/terra-bowl-4.jpg',
+        ...dimensions.landscape.medium,
+      },
+      
+    ],
+    description:
+       'Hand-built sculptural bowl with scale detail made in a blend of clays and slips gathered from Dulwich Woods, embedded with crushed granite stones, unglazed, fired 5 times.',
+    dimensions: 'Approx. 30cm Dia. x 18cm H',
+  },
+  {
+    sku: 'red-earth-bowl',
+    pre: 'Red Earth Bowl',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/red-earth-bowl/red-earth-bowl-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/red-earth-bowl/red-earth-bowl-1.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/red-earth-bowl/red-earth-bowl-2.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/red-earth-bowl/red-earth-bowl-3.jpg',
+        ...dimensions.landscape.large,
+      },
+      
+    ],
+    description:
+       'Hand-built sculptural bowl with scale detail made in a deep red brick clay, embedded with crushed white granite stones, unglazed.',
+    dimensions: 'Approx. 30cm Dia. x 18cm H',
+  },
+  {
+    sku: 'red-earth-urn',
+    pre: 'Red Earth Urn',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/red-earth-urn/red-earth-urn-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/red-earth-urn/red-earth-urn-1.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/red-earth-urn/red-earth-urn-2.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/red-earth-urn/red-earth-urn-3.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/red-earth-urn/red-earth-urn-4.jpg',
+        ...dimensions.landscape.large,
+      },
+      
+    ],
+    description:
+       'Hand-built sculptural urn with scale detail made in a deep red brick clay, embedded with crushed white granite stones, unglazed.',
+    dimensions: 'Approx. 20cm Dia. x 15cm H',
+  },
+  {
+    sku: 'coral-reef-bowl',
+    pre: 'Coral Reef Bowl',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/coral-reef-bowl/coral-reef-bowl-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/coral-reef-bowl/coral-reef-bowl-1.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/coral-reef-bowl/coral-reef-bowl-2.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/coral-reef-bowl/coral-reef-bowl-3.jpg',
+        ...dimensions.landscape.medium,
+      },
+      {
+        src: '/images/products/coral-reef-bowl/coral-reef-bowl-4.jpg',
+        ...dimensions.landscape.large,
+      },
+      
+    ],
+    description:
+       'Hand-built sculptural bowl in a blend of porcelain and recycled clays, with white, blue, lavender and yellow crater volcanic glazes embedded with various crushed granite stones, fired 5 times.',
+    dimensions: 'Approx. 40cm Dia. x 25cm H',
+  },
+  {
+    sku: 'sculptural-plates',
+    pre: 'Sculptural Plates',
     offsetX: offset.x.two,
     offsetY: offset.y.five,
     ...dimensions.portrait.medium,
-    thumbnail: '/images/products/terracotta-crater-chawan/1.jpg',
+    thumbnail: '/images/products/sculptural-plates/sculptural-plates-1.jpg',
     imageCarousel: [
       {
-        src: '/images/products/crater-buff-chawan/1.jpg',
+        src: '/images/products/sculptural-plates/sculptural-plates-1.jpg',
         ...dimensions.portrait.medium,
       },
       {
-        src: '/images/products/crater-buff-chawan/1.jpg',
+        src: '/images/products/sculptural-plates/sculptural-plates-2.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/sculptural-plates/sculptural-plates-3.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/sculptural-plates/sculptural-plates-4.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sculptural-plates/sculptural-plates-5.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sculptural-plates/sculptural-plates-6.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sculptural-plates/sculptural-plates-7.jpg',
+        ...dimensions.portrait.large,
+      },
+    ],
+    description:
+       'Hand-built round plates sculpted in a blend of clays with multiple layers of sand and crushed granite stones sediments and oak and dried flower ash glaze.',
+    dimensions: 'Approx. 20cm Dia. x 3cm H',
+  },
+  {
+    sku: 'marbled-plate',
+    pre: 'Marbled Plate',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/marbled-plate/marbled-plate-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/marbled-plate/marbled-plate-1.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/marbled-plate/marbled-plate-2.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/marbled-plate/marbled-plate-3.jpg',
         ...dimensions.portrait.medium,
       },
     ],
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+       'Hand-built round plate in a blend of porcelain and black clay, sealed with a transparent glaze to one side and left unglazed to the other side.',
+    dimensions:'Approx. 20cm Dia. x 1cm H',
+  },
+  {
+    sku: 'terra-&-stone-bowl',
+    pre: 'Terra & Stone Bowl',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.portrait.medium,
+    thumbnail: '/images/products/terra-&-stone-bowl/terra-&-stone-bowl-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/terra-&-stone-bowl/terra-&-stone-bowl-1.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/terra-&-stone-bowl/terra-&-stone-bowl-2.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/terra-&-stone-bowl/terra-&-stone-bowl-3.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/terra-&-stone-bowl/terra-&-stone-bowl-4.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/terra-&-stone-bowl/terra-&-stone-bowl-5.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/terra-&-stone-bowl/terra-&-stone-bowl-6.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/terra-&-stone-bowl/terra-&-stone-bowl-7.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/terra-&-stone-bowl/terra-&-stone-bowl-8.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/terra-&-stone-bowl/terra-&-stone-bowl-9.jpg',
+        ...dimensions.portrait.medium,
+      },
+    ],
+    description:
+       'Hand-built bowl in a blend of clays, embedded with crushed granite stones, unglazed.',
+    dimensions: 'Approx. 30cm Dia. x 18cm H',
+    designer: 'Ikebana arrangements by Wagner Kreush.'
+  },
+  {
+    sku: 'soil-&-sand-plates',
+    pre: 'Soil & Sand Plates',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.portrait.medium,
+    thumbnail: '/images/products/soil-&-sand-plates/soil-&-sand-plates-1.jpg',
+    imageCarousel:[
+      {
+        src: '/images/products/soil-&-sand-plates/soil-&-sand-plates-1.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/soil-&-sand-plates/soil-&-sand-plates-2.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/soil-&-sand-plates/soil-&-sand-plates-3.jpg',
+        ...dimensions.portrait.medium,
+      },
+    ],
+    description:
+       'Coiled sculptural vessel in a blend of porcelain and recycled clays, with a white crater volcanic glaze and crushed granite stones, fired 5 times.',
+    dimensions: 'Approx. 30cm Dia. x 55cm H',
+  },
+  {
+    sku: 'iron-bowl',
+    pre: 'Iron Bowl',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/iron-bowl/iron-bowl-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/iron-bowl/iron-bowl-1.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/iron-bowl/iron-bowl-2.jpg',
+        ...dimensions.landscape.large,
+      },
+    ],
+    description:
+       'Wheel thrown stoneware bowl with a black iron and manganese gold glaze, fired 5 times.',
+    dimensions: 'Approx. 20cm Dia. x 3cm H',
+  },
+  {
+    sku: 'soil-&-ash-plates-series',
+    pre: 'Soil & Ash Plates Series',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-1.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-2.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-3.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-4.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-5.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-6.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-7.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-8.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-9.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-10.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-11.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-12.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-14.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-15.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-16.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-17.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-18.jpg',
+        ...dimensions.landscape.large,
+      },
+    ],
+    description:
+       'Hand-built round plates each made from a blend of clays embedded with sand, stones and crushed fired clay, sealed with transparent, wood and grasses ash glazes.',
+       dimensions: 'Approx. 20cm Dia. x 1cm H',
+  },
+  {
+    sku: 'tea-cup-series',
+    pre: 'Tea Cup Series',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.portrait.medium,
+    thumbnail: '/images/products/tea-cup-series/tea-cup-series-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-1.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-2.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-3.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-4.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-5.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-6.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-7.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-8.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-9.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-10.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-11.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-12.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-13.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-14.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-15.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/tea-cup-series/tea-cup-series-16.jpg',
+        ...dimensions.landscape.large,
+      },
+    ],
+    description:
+       ' Hand-built tea cups in a blend of clays embedded crushed granite, unglazed and various other glazes such as dried flowers and wood ash.',
+    dimensions: 'Approx. 10cm Dia. x 10cm H',
+  },
+  {
+    sku: 'sake-cup-series',
+    pre: 'Sake Cup Series',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/sake-cup-series/sake-cup-series-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-1.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-2.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-3.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-4.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-5.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-6.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-7.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-8.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-9.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-10.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-11.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-12.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-13.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-14.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-15.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-16.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-17.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/sake-cup-series/sake-cup-series-18.jpg',
+        ...dimensions.landscape.large,
+      },
+    ],
+    description:
+       'Hand-built sake cups in a blend of clays embedded crushed granite, unglazed and various glazes including wood and grasses ash glazes.',
+    dimensions: 'Approx. 8cm Dia. x 10cm H',
   },
 ]
