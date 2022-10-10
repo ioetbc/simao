@@ -139,12 +139,12 @@ export const plates = [
     pre: 'Black Crater Bowl',
     offsetX: offset.x.two,
     offsetY: offset.y.five,
-    ...dimensions.landscape.large,
+    ...dimensions.landscape.medium,
     thumbnail: '/images/products/black-crater-bowl/black-crater-bowl-1.jpg',
     imageCarousel: [
       {
         src: '/images/products/black-crater-bowl/black-crater-bowl-1.jpg',
-        ...dimensions.landscape.large,
+        ...dimensions.landscape.medium,
       },
       {
         src: '/images/products/black-crater-bowl/black-crater-bowl-2.jpg',
@@ -526,6 +526,81 @@ export const plates = [
     dimensions: 'Approx. 20cm Dia. x 3cm H',
   },
   {
+    sku: 'stone-candle-holders',
+    pre: 'Stone Candle Holders',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.portrait.medium,
+    thumbnail: '/images/products/stone-candle-holders/stone-candle-holders-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/stone-candle-holders/stone-candle-holders-1.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/stone-candle-holders/stone-candle-holders-2.jpg',
+        ...dimensions.landscape.large,
+      },
+    ],
+    description:
+       'Hand-built sculptural organic forms in a blend of clays embedded crushed granite, fired in various wood ash glazes.',
+    dimensions: 'Approx. 8cm Dia. x 12cm H',
+  },
+  {
+    sku: 'wood-ash-plates',
+    pre: 'Wood Ash Plates',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.portrait.medium,
+    thumbnail: '/images/products/wood-ash-plates/wood-ash-plates-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/wood-ash-plates/wood-ash-plates-1.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/wood-ash-plates/wood-ash-plates-2.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/wood-ash-plates/wood-ash-plates-3.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/wood-ash-plates/wood-ash-plates-4.jpg',
+        ...dimensions.portrait.medium,
+      },
+    ],
+    description:
+       'Hand-built round plates in a blend of black porcelain and stoneware clays, slips gathered from Dulwich Woods finished with stone carvings with oak and walnut ashes glazes.',
+    dimensions: 'Approx. 20cm Dia. x 2cm H',
+  },
+  {
+    sku: 'blue-bowl',
+    pre: 'Blue Bowl',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.portrait.medium,
+    thumbnail: '/images/products/blue-bowl/blue-bowl-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/blue-bowl/blue-bowl-1.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/blue-bowl/blue-bowl-2.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/blue-bowl/blue-bowl-3.jpg',
+        ...dimensions.portrait.medium,
+      },
+    ],
+    description:
+       'Wheel thrown stoneware bowl with a white and blue crater glaze, fired 4 times.',
+    dimensions: 'Approx. 15cm Dia. x 3cm H',
+  },
+  {
     sku: 'soil-&-ash-plates-series',
     pre: 'Soil & Ash Plates Series',
     offsetX: offset.x.two,
@@ -767,5 +842,82 @@ export const plates = [
     description:
        'Hand-built sake cups in a blend of clays embedded crushed granite, unglazed and various glazes including wood and grasses ash glazes.',
     dimensions: 'Approx. 8cm Dia. x 10cm H',
+  },
+  {
+    sku: 'chawan-series',
+    pre: 'Chawan Series',
+    offsetX: offset.x.two,
+    offsetY: offset.y.five,
+    ...dimensions.landscape.large,
+    thumbnail: '/images/products/chawan-series/chawan-series-1.jpg',
+    imageCarousel: [
+      {
+        src: '/images/products/chawan-series/chawan-series-1.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-2.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-3.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-4.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-5.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-6.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-7.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-8.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-9.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-10.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-11.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-12.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-13.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-14.jpg',
+        ...dimensions.landscape.large,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-15.jpg',
+        ...dimensions.portrait.medium,
+      },
+      {
+        src: '/images/products/chawan-series/chawan-series-16.jpg',
+        ...dimensions.portrait.medium,
+      },
+    ],
+    description:
+       'Hand-built tea bowls in a blend of clays embedded crushed granite and other stones, unglazed/ various other glazes such as dried flowers and wood ash.',
+    dimensions: 'Approx. 10cm Dia. x 10cm H',
   },
 ]
