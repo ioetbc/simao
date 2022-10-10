@@ -6,7 +6,7 @@
     "no-unused-vars": "error",
     "node/no-unsupported-features/es-syntax": "off",
     "node/no-missing-import": "off",
-    "allowForLoopAfterthoughts": "true",
+    "allowForLoopAfterthoughts": "off",
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": "off",
     "react/jsx-boolean-value": "off",

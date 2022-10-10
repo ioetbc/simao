@@ -9,17 +9,17 @@ const offset = {
   y: {
     one: 0,
     two: 50,
-    three: 75,
-    four: 100,
-    five: 150,
+    three: 150,
+    four: 300,
+    five: 400,
   },
 }
 
 const dimensions = {
   square: {
     large: {
-      width: 1910,
-      height: 1799,
+      width: 960,
+      height: 960,
     },
   },
   portrait: {
@@ -91,9 +91,9 @@ export const plates = [
       },
     ],
     description:
-       'Coiled with layers of black clay blend, slips gathered from Dulwich Woods, embedded with crushed granite stones.',
+      'Coiled with layers of black clay blend, slips gathered from Dulwich Woods, embedded with crushed granite stones.',
     dimensions: 'Approx. 40cm Dia. x 45cm H',
-    designer: 'Ikebana arrangement by Wagner Kreush.'
+    designer: 'Ikebana arrangement by Wagner Kreush.',
   },
   {
     sku: 'blue-crater-bowl',
@@ -127,19 +127,18 @@ export const plates = [
         src: '/images/products/blue-crater-bowl/blue-crater-bowl-6.jpg',
         ...dimensions.portrait.medium,
       },
-    
     ],
     description:
-       'Hand-built sculptural bowl in a blend of porcelain and recycled clays, with a blue and lavender crater volcanic glaze.',
+      'Hand-built sculptural bowl in a blend of porcelain and recycled clays, with a blue and lavender crater volcanic glaze.',
     dimensions: 'Approx. 35cm Dia. x 15cm H',
-    designer: 'Ikebana arrangement by Wagner Kreush.'
+    designer: 'Ikebana arrangement by Wagner Kreush.',
   },
   {
     sku: 'black-crater-bowl',
     pre: 'Black Crater Bowl',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
-    ...dimensions.landscape.medium,
+    offsetY: offset.y.three,
+    ...dimensions.landscape.large,
     thumbnail: '/images/products/black-crater-bowl/black-crater-bowl-1.jpg',
     imageCarousel: [
       {
@@ -174,19 +173,19 @@ export const plates = [
         src: '/images/products/black-crater-bowl/black-crater-bowl-8.jpg',
         ...dimensions.portrait.medium,
       },
-    
     ],
     description:
-       'Hand-built sculptural bowl in black clay, with a grey and black volcanic glaze.',
+      'Hand-built sculptural bowl in black clay, with a grey and black volcanic glaze.',
     dimensions: 'Approx. 35cm Dia. x 15cm H',
-    designer: 'Ikebana arrangements by Wagner Kreush for the British Flower Week at the Garden Museum - London.'
+    designer:
+      'Ikebana arrangements by Wagner Kreush for the British Flower Week at the Garden Museum - London.',
   },
   {
     sku: 'white-crater-bowls',
     pre: 'White Crater Bowls',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
-    ...dimensions.landscape.large,
+    offsetY: offset.y.three,
+    ...dimensions.landscape.small,
     thumbnail: '/images/products/white-crater-bowls/white-crater-bowl-1.jpg',
     imageCarousel: [
       {
@@ -209,21 +208,20 @@ export const plates = [
         src: '/images/products/white-crater-bowls/white-crater-bowl-5.jpg',
         ...dimensions.landscape.large,
       },
-      
     ],
     description:
-       'Hand-built sculptural bowls in a blend of porcelain and recycled clays, with a white crater volcanic glaze and granite dust, fired 4 times.',
+      'Hand-built sculptural bowls in a blend of porcelain and recycled clays, with a white crater volcanic glaze and granite dust, fired 4 times.',
     dimensions: 'Large Bowl Approx. 40cm Dia. x 25cm H',
     secondDimensions: 'Small Bowls Approx. 15cm Dia. x 8cm H',
-    
   },
   {
     sku: 'white-crater-&-granite-vessel',
     pre: 'White Crater & Granite Vessel',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
+    offsetY: offset.y.two,
     ...dimensions.landscape.large,
-    thumbnail: '/images/products/white-crater-&-granite-vessel/white-crater-&-granite-vessel-1.jpg',
+    thumbnail:
+      '/images/products/white-crater-&-granite-vessel/white-crater-&-granite-vessel-1.jpg',
     imageCarousel: [
       {
         src: '/images/products/white-crater-&-granite-vessel/white-crater-&-granite-vessel-1.jpg',
@@ -241,17 +239,16 @@ export const plates = [
         src: '/images/products/white-crater-&-granite-vessel/white-crater-&-granite-vessel-4.jpg',
         ...dimensions.landscape.medium,
       },
-      
     ],
     description:
-       'Coiled sculptural vessel in a blend of porcelain and recycled clays, with a white crater volcanic glaze and crushed granite stones, fired 5 times.',
+      'Coiled sculptural vessel in a blend of porcelain and recycled clays, with a white crater volcanic glaze and crushed granite stones, fired 5 times.',
     dimensions: 'Approx. 30cm Dia. x 55cm H',
   },
   {
     sku: 'terra-bowl',
     pre: 'Terra Bowl',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
+    offsetY: offset.y.three,
     ...dimensions.landscape.large,
     thumbnail: '/images/products/terra-bowl/terra-bowl-1.jpg',
     imageCarousel: [
@@ -271,17 +268,16 @@ export const plates = [
         src: '/images/products/terra-bowl/terra-bowl-4.jpg',
         ...dimensions.landscape.medium,
       },
-      
     ],
     description:
-       'Hand-built sculptural bowl with scale detail made in a blend of clays and slips gathered from Dulwich Woods, embedded with crushed granite stones, unglazed, fired 5 times.',
+      'Hand-built sculptural bowl with scale detail made in a blend of clays and slips gathered from Dulwich Woods, embedded with crushed granite stones, unglazed, fired 5 times.',
     dimensions: 'Approx. 30cm Dia. x 18cm H',
   },
   {
     sku: 'red-earth-bowl',
     pre: 'Red Earth Bowl',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
+    offsetY: offset.y.four,
     ...dimensions.landscape.large,
     thumbnail: '/images/products/red-earth-bowl/red-earth-bowl-1.jpg',
     imageCarousel: [
@@ -297,18 +293,17 @@ export const plates = [
         src: '/images/products/red-earth-bowl/red-earth-bowl-3.jpg',
         ...dimensions.landscape.large,
       },
-      
     ],
     description:
-       'Hand-built sculptural bowl with scale detail made in a deep red brick clay, embedded with crushed white granite stones, unglazed.',
+      'Hand-built sculptural bowl with scale detail made in a deep red brick clay, embedded with crushed white granite stones, unglazed.',
     dimensions: 'Approx. 30cm Dia. x 18cm H',
   },
   {
     sku: 'red-earth-urn',
     pre: 'Red Earth Urn',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
-    ...dimensions.landscape.large,
+    offsetY: offset.y.one,
+    ...dimensions.landscape.medium,
     thumbnail: '/images/products/red-earth-urn/red-earth-urn-1.jpg',
     imageCarousel: [
       {
@@ -327,10 +322,9 @@ export const plates = [
         src: '/images/products/red-earth-urn/red-earth-urn-4.jpg',
         ...dimensions.landscape.large,
       },
-      
     ],
     description:
-       'Hand-built sculptural urn with scale detail made in a deep red brick clay, embedded with crushed white granite stones, unglazed.',
+      'Hand-built sculptural urn with scale detail made in a deep red brick clay, embedded with crushed white granite stones, unglazed.',
     dimensions: 'Approx. 20cm Dia. x 15cm H',
   },
   {
@@ -357,17 +351,16 @@ export const plates = [
         src: '/images/products/coral-reef-bowl/coral-reef-bowl-4.jpg',
         ...dimensions.landscape.large,
       },
-      
     ],
     description:
-       'Hand-built sculptural bowl in a blend of porcelain and recycled clays, with white, blue, lavender and yellow crater volcanic glazes embedded with various crushed granite stones, fired 5 times.',
+      'Hand-built sculptural bowl in a blend of porcelain and recycled clays, with white, blue, lavender and yellow crater volcanic glazes embedded with various crushed granite stones, fired 5 times.',
     dimensions: 'Approx. 40cm Dia. x 25cm H',
   },
   {
     sku: 'sculptural-plates',
     pre: 'Sculptural Plates',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
+    offsetY: offset.y.three,
     ...dimensions.portrait.medium,
     thumbnail: '/images/products/sculptural-plates/sculptural-plates-1.jpg',
     imageCarousel: [
@@ -401,7 +394,7 @@ export const plates = [
       },
     ],
     description:
-       'Hand-built round plates sculpted in a blend of clays with multiple layers of sand and crushed granite stones sediments and oak and dried flower ash glaze.',
+      'Hand-built round plates sculpted in a blend of clays with multiple layers of sand and crushed granite stones sediments and oak and dried flower ash glaze.',
     dimensions: 'Approx. 20cm Dia. x 3cm H',
   },
   {
@@ -409,7 +402,7 @@ export const plates = [
     pre: 'Marbled Plate',
     offsetX: offset.x.two,
     offsetY: offset.y.five,
-    ...dimensions.landscape.large,
+    ...dimensions.landscape.medium,
     thumbnail: '/images/products/marbled-plate/marbled-plate-1.jpg',
     imageCarousel: [
       {
@@ -426,14 +419,14 @@ export const plates = [
       },
     ],
     description:
-       'Hand-built round plate in a blend of porcelain and black clay, sealed with a transparent glaze to one side and left unglazed to the other side.',
-    dimensions:'Approx. 20cm Dia. x 1cm H',
+      'Hand-built round plate in a blend of porcelain and black clay, sealed with a transparent glaze to one side and left unglazed to the other side.',
+    dimensions: 'Approx. 20cm Dia. x 1cm H',
   },
   {
     sku: 'terra-&-stone-bowl',
     pre: 'Terra & Stone Bowl',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
+    offsetY: offset.y.four,
     ...dimensions.portrait.medium,
     thumbnail: '/images/products/terra-&-stone-bowl/terra-&-stone-bowl-1.jpg',
     imageCarousel: [
@@ -475,18 +468,18 @@ export const plates = [
       },
     ],
     description:
-       'Hand-built bowl in a blend of clays, embedded with crushed granite stones, unglazed.',
+      'Hand-built bowl in a blend of clays, embedded with crushed granite stones, unglazed.',
     dimensions: 'Approx. 30cm Dia. x 18cm H',
-    designer: 'Ikebana arrangements by Wagner Kreush.'
+    designer: 'Ikebana arrangements by Wagner Kreush.',
   },
   {
     sku: 'soil-&-sand-plates',
     pre: 'Soil & Sand Plates',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
+    offsetY: offset.y.three,
     ...dimensions.portrait.medium,
     thumbnail: '/images/products/soil-&-sand-plates/soil-&-sand-plates-1.jpg',
-    imageCarousel:[
+    imageCarousel: [
       {
         src: '/images/products/soil-&-sand-plates/soil-&-sand-plates-1.jpg',
         ...dimensions.portrait.medium,
@@ -501,7 +494,7 @@ export const plates = [
       },
     ],
     description:
-       'Coiled sculptural vessel in a blend of porcelain and recycled clays, with a white crater volcanic glaze and crushed granite stones, fired 5 times.',
+      'Coiled sculptural vessel in a blend of porcelain and recycled clays, with a white crater volcanic glaze and crushed granite stones, fired 5 times.',
     dimensions: 'Approx. 30cm Dia. x 55cm H',
   },
   {
@@ -522,16 +515,17 @@ export const plates = [
       },
     ],
     description:
-       'Wheel thrown stoneware bowl with a black iron and manganese gold glaze, fired 5 times.',
+      'Wheel thrown stoneware bowl with a black iron and manganese gold glaze, fired 5 times.',
     dimensions: 'Approx. 20cm Dia. x 3cm H',
   },
   {
     sku: 'stone-candle-holders',
     pre: 'Stone Candle Holders',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
+    offsetY: offset.y.two,
     ...dimensions.portrait.medium,
-    thumbnail: '/images/products/stone-candle-holders/stone-candle-holders-1.jpg',
+    thumbnail:
+      '/images/products/stone-candle-holders/stone-candle-holders-1.jpg',
     imageCarousel: [
       {
         src: '/images/products/stone-candle-holders/stone-candle-holders-1.jpg',
@@ -543,14 +537,14 @@ export const plates = [
       },
     ],
     description:
-       'Hand-built sculptural organic forms in a blend of clays embedded crushed granite, fired in various wood ash glazes.',
+      'Hand-built sculptural organic forms in a blend of clays embedded crushed granite, fired in various wood ash glazes.',
     dimensions: 'Approx. 8cm Dia. x 12cm H',
   },
   {
     sku: 'wood-ash-plates',
     pre: 'Wood Ash Plates',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
+    offsetY: offset.y.one,
     ...dimensions.portrait.medium,
     thumbnail: '/images/products/wood-ash-plates/wood-ash-plates-1.jpg',
     imageCarousel: [
@@ -572,14 +566,14 @@ export const plates = [
       },
     ],
     description:
-       'Hand-built round plates in a blend of black porcelain and stoneware clays, slips gathered from Dulwich Woods finished with stone carvings with oak and walnut ashes glazes.',
+      'Hand-built round plates in a blend of black porcelain and stoneware clays, slips gathered from Dulwich Woods finished with stone carvings with oak and walnut ashes glazes.',
     dimensions: 'Approx. 20cm Dia. x 2cm H',
   },
   {
     sku: 'blue-bowl',
     pre: 'Blue Bowl',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
+    offsetY: offset.y.four,
     ...dimensions.portrait.medium,
     thumbnail: '/images/products/blue-bowl/blue-bowl-1.jpg',
     imageCarousel: [
@@ -597,7 +591,7 @@ export const plates = [
       },
     ],
     description:
-       'Wheel thrown stoneware bowl with a white and blue crater glaze, fired 4 times.',
+      'Wheel thrown stoneware bowl with a white and blue crater glaze, fired 4 times.',
     dimensions: 'Approx. 15cm Dia. x 3cm H',
   },
   {
@@ -605,8 +599,9 @@ export const plates = [
     pre: 'Soil & Ash Plates Series',
     offsetX: offset.x.two,
     offsetY: offset.y.five,
-    ...dimensions.landscape.large,
-    thumbnail: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-1.jpg',
+    ...dimensions.landscape.two,
+    thumbnail:
+      '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-1.jpg',
     imageCarousel: [
       {
         src: '/images/products/soil-&-ash-plates-series/soil-&-ash-plates-series-1.jpg',
@@ -678,8 +673,8 @@ export const plates = [
       },
     ],
     description:
-       'Hand-built round plates each made from a blend of clays embedded with sand, stones and crushed fired clay, sealed with transparent, wood and grasses ash glazes.',
-       dimensions: 'Approx. 20cm Dia. x 1cm H',
+      'Hand-built round plates each made from a blend of clays embedded with sand, stones and crushed fired clay, sealed with transparent, wood and grasses ash glazes.',
+    dimensions: 'Approx. 20cm Dia. x 1cm H',
   },
   {
     sku: 'tea-cup-series',
@@ -755,14 +750,14 @@ export const plates = [
       },
     ],
     description:
-       ' Hand-built tea cups in a blend of clays embedded crushed granite, unglazed and various other glazes such as dried flowers and wood ash.',
+      ' Hand-built tea cups in a blend of clays embedded crushed granite, unglazed and various other glazes such as dried flowers and wood ash.',
     dimensions: 'Approx. 10cm Dia. x 10cm H',
   },
   {
     sku: 'sake-cup-series',
     pre: 'Sake Cup Series',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
+    offsetY: offset.y.two,
     ...dimensions.landscape.large,
     thumbnail: '/images/products/sake-cup-series/sake-cup-series-1.jpg',
     imageCarousel: [
@@ -840,14 +835,14 @@ export const plates = [
       },
     ],
     description:
-       'Hand-built sake cups in a blend of clays embedded crushed granite, unglazed and various glazes including wood and grasses ash glazes.',
+      'Hand-built sake cups in a blend of clays embedded crushed granite, unglazed and various glazes including wood and grasses ash glazes.',
     dimensions: 'Approx. 8cm Dia. x 10cm H',
   },
   {
     sku: 'chawan-series',
     pre: 'Chawan Series',
     offsetX: offset.x.two,
-    offsetY: offset.y.five,
+    offsetY: offset.y.one,
     ...dimensions.landscape.large,
     thumbnail: '/images/products/chawan-series/chawan-series-1.jpg',
     imageCarousel: [
@@ -917,7 +912,7 @@ export const plates = [
       },
     ],
     description:
-       'Hand-built tea bowls in a blend of clays embedded crushed granite and other stones, unglazed/ various other glazes such as dried flowers and wood ash.',
+      'Hand-built tea bowls in a blend of clays embedded crushed granite and other stones, unglazed/ various other glazes such as dried flowers and wood ash.',
     dimensions: 'Approx. 10cm Dia. x 10cm H',
   },
 ]
