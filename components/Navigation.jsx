@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { IoGridOutline, IoCloseCircleOutline } from 'react-icons/io5'
-import { Logo } from './Logo'
-
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
+
+import { Logo } from './Logo'
 
 const AnimatedMenuItems = styled.div`
   .item-container {

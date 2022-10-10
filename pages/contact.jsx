@@ -17,9 +17,9 @@ const Contact = () => {
     >
       <div className="md:mt-52 flex justify-between">
         <p className="max-w-xs text-lg">
-          I'm always open to collaborations, swaps and skill exchanges. For all
-          sales, commissions, collaborations, press and general enquiries please
-          contact me.
+          I&apos;m always open to collaborations, swaps and skill exchanges. For
+          all sales, commissions, collaborations, press and general enquiries
+          please contact me.
         </p>
         <ul className="text-right mt-32">
           <li>
@@ -27,13 +27,17 @@ const Contact = () => {
               className="link leading-tight"
               href="https://www.instagram.com/simao_romualdo/"
               target="_blank"
+              rel="noreferrer"
             >
               instagram
             </a>
           </li>
-        
+
           <li className="mt-2">
-            <a className="link leading-tight" href="mailto:simaoromualdo@icloud.com">
+            <a
+              className="link leading-tight"
+              href="mailto:simaoromualdo@icloud.com"
+            >
               simaoromualdo@icloud.com
             </a>
           </li>

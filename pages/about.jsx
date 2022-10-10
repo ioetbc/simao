@@ -36,15 +36,15 @@ const About = () => {
                 passion and curiosity. These objects and their making convey
                 more than their material properties of shape and form. It is
                 myself in them. They begin as elements in a realm of emotion and
-                desire, before coming into the world to be held by hands.
-                These things are images of my own soul. To me, the act of making 
-                is physical poetry, guided by hands and heart
-                and these artifacts, are imprints of my soul and love.
+                desire, before coming into the world to be held by hands. These
+                things are images of my own soul. To me, the act of making is
+                physical poetry, guided by hands and heart and these artifacts,
+                are imprints of my soul and love.
               </p>
             </div>
             <div className="mb-12 md:max-w-md md:ml-auto lg:max-w-xl lg:mt-80">
               <p className="text-xl">
-                In today's world - where we are often surrounded by digital
+                In today&apos;s world - where we are often surrounded by digital
                 experiences - I invite everyone to slow down through my work, to
                 hold something in your hands, and to pause for a moment of pure
                 being. Like every human on this earth my pieces are unique, one
@@ -55,29 +55,32 @@ const About = () => {
                 beings.
               </p>
               <p className="mt-4 text-xl">
-                Brazilian born, trained in England and the USA, with a background in Interior
-                &amp; Spatial Design, I began working in ceramics in 2021 and
-                continue my practice-led exploration into functional and
-                sculptural ceramic vessels, hand-making each piece currently
-                from London, UK.
+                Brazilian born, trained in England and the USA, with a
+                background in Interior &amp; Spatial Design, I began working in
+                ceramics in 2021 and continue my practice-led exploration into
+                functional and sculptural ceramic vessels, hand-making each
+                piece currently from London, UK.
               </p>
             </div>
           </div>
           <div>
-          <p className="md:ml-20 md:max-w-md lg:max-w-xl lg:-mt-10 text-lg">
-            I recognise that a contemporary ceramics practice can be
-            ecologically damaging due to its reliance on mined raw materials and
-            energy for firings. In an effort to reduce my environmental impact,
-            I am also investigating new aspects of making in my practice
-            including the use of materials, processes and influences.
-          </p>
-          <p className="md:ml-20 md:max-w-md lg:max-w-xl mt-10 text-lg">
-            My main inspiration is the natural world and I want to work in ways that
-            honour the materials past, present and future. This is an ongoing
-            work and intent to continue searching for new practices in the
-            future. I would be happy to have a dialogue with like-minded people
-            on the subject; please email me at <a className='text-lg' href='mailto:simaoromualdo@icloud.com'>simaoromualdo@icloud.com</a>
-          </p>
+            <p className="md:ml-20 md:max-w-md lg:max-w-xl lg:-mt-10 text-lg">
+              I recognise that a contemporary ceramics practice can be
+              ecologically damaging due to its reliance on mined raw materials
+              and energy for firings. In an effort to reduce my environmental
+              impact, I am also investigating new aspects of making in my
+              practice including the use of materials, processes and influences.
+            </p>
+            <p className="md:ml-20 md:max-w-md lg:max-w-xl mt-10 text-lg">
+              My main inspiration is the natural world and I want to work in
+              ways that honour the materials past, present and future. This is
+              an ongoing work and intent to continue searching for new practices
+              in the future. I would be happy to have a dialogue with
+              like-minded people on the subject; please email me at{' '}
+              <a className="text-lg" href="mailto:simaoromualdo@icloud.com">
+                simaoromualdo@icloud.com
+              </a>
+            </p>
           </div>
         </div>
       </div>
