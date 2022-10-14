@@ -64,23 +64,31 @@ const About = () => {
             </div>
           </div>
           <div>
-            <p className="md:ml-20 md:max-w-md lg:max-w-xl lg:-mt-10 text-lg">
-              I recognise that a contemporary ceramics practice can be
-              ecologically damaging due to its reliance on mined raw materials
-              and energy for firings. In an effort to reduce my environmental
-              impact, I am also investigating new aspects of making in my
-              practice including the use of materials, processes and influences.
-            </p>
-            <p className="md:ml-20 md:max-w-md lg:max-w-xl mt-10 text-lg">
-              My main inspiration is the natural world and I want to work in
-              ways that honour the materials past, present and future. This is
-              an ongoing work and intent to continue searching for new practices
-              in the future. I would be happy to have a dialogue with
-              like-minded people on the subject; please email me at{' '}
-              <a className="text-lg" href="mailto:simaoromualdo@icloud.com">
-                simaoromualdo@icloud.com
-              </a>
-            </p>
+          <p className="md:ml-20 md:max-w-md lg:max-w-xl lg:mt-20 text-lg">
+            I recognise that a contemporary ceramics practice can be
+            ecologically damaging due to its reliance on mined raw materials and
+            energy for firings. In an effort to reduce my environmental impact,
+            I am also investigating new aspects of making in my practice
+            including the use of materials, processes and influences.
+          </p>
+          <p className="md:ml-20 md:max-w-md lg:max-w-xl mt-20 text-lg">
+            My main inspiration is the natural world and I want to work in ways that
+            honour the materials past, present and future. This is an ongoing
+            work and I intend to continue searching for new practices in the
+            future. I would be happy to have a dialogue with like-minded people
+            on the subject; please email me at <a className='text-lg' href='mailto:simaoromualdo@icloud.com'>simaoromualdo@icloud.com</a>
+          </p>
+          <div className='flex justify-center'>
+          <p className="md:max-w-md lg:max-w-xl lg:mt-20 text-lg text-center">
+          We are all one<br />
+          <br />
+
+The natural world is a font of endless knowledge, both mental and spiritual to me but also how I express myself though my work. It’s time for us all to act and use our power and actions for the better and make a positive impact in averting the crisis we can all see happening in nature.
+It’s about healing our relationship with nature, each other and ourselves.
+The protection of the environment in places such as the Amazon forest is a human right and our Indigenous populations such as the Yanomami - the original Brazilians - are the ones that can teach us how to protect the natural world.<br /><br />
+5% of sales will be donated to support <a href="https://www.socioambiental.org/en/" target='_blank'>The Instituto Sociambiental</a> (Socio-Environmental Institute - ISA), who are working to defend indigenous right, integrating environmental protection and sustainable development with indigenous groups.
+          </p>
+          </div>
           </div>
         </div>
       </div>

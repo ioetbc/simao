@@ -93,7 +93,8 @@ export const plates = [
     description:
       'Coiled with layers of black clay blend, slips gathered from Dulwich Woods, embedded with crushed granite stones.',
     dimensions: 'Approx. 40cm Dia. x 45cm H',
-    designer: 'Ikebana arrangement by Wagner Kreush.',
+    designerPre: 'Ikebana arrangement by ',
+    designer: 'Wagner Kreush.'
   },
   {
     sku: 'blue-crater-bowl',
@@ -131,7 +132,8 @@ export const plates = [
     description:
       'Hand-built sculptural bowl in a blend of porcelain and recycled clays, with a blue and lavender crater volcanic glaze.',
     dimensions: 'Approx. 35cm Dia. x 15cm H',
-    designer: 'Ikebana arrangement by Wagner Kreush.',
+    designerPre: 'Ikebana arrangement ',
+    designer: 'by Wagner Kreush.'
   },
   {
     sku: 'black-crater-bowl',
@@ -177,8 +179,8 @@ export const plates = [
     description:
       'Hand-built sculptural bowl in black clay, with a grey and black volcanic glaze.',
     dimensions: 'Approx. 35cm Dia. x 15cm H',
-    designer:
-      'Ikebana arrangements by Wagner Kreush for the British Flower Week at the Garden Museum - London.',
+    designerPre: 'Ikebana arrangements by ',
+    designer: 'Wagner Kreush'
   },
   {
     sku: 'white-crater-bowls',
@@ -470,7 +472,8 @@ export const plates = [
     description:
       'Hand-built bowl in a blend of clays, embedded with crushed granite stones, unglazed.',
     dimensions: 'Approx. 30cm Dia. x 18cm H',
-    designer: 'Ikebana arrangements by Wagner Kreush.',
+    designerPre: 'Ikebana arrangements by ',
+    designer: 'Wagner Kreush.',
   },
   {
     sku: 'soil-&-sand-plates',
