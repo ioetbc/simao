@@ -42,7 +42,15 @@ const Plates = () => {
           <p className="mt-4">{product?.dimensions}</p>
           <p className="mt-4">{product?.secondDimensions}</p>
           <p className="mt-4">
-            {product?.designerPre}<a href="https://www.wagnerkreusch.com/" target='_blank'>{product?.designer}</a></p>
+            {product?.designerPre}
+            <a
+              href="https://www.wagnerkreusch.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {product?.designer}
+            </a>
+          </p>
           <div className="mt-4">
             <a href="simaoromualdo@icloud.com">( enquire )</a>
           </div>
