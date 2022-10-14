@@ -1,6 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Cookies from 'js-cookie'
-import { useEffect } from 'react/cjs/react.development'
 
 import { Title } from '../components/Title'
 
